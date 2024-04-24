@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --grid: 12;
+  --grid-container-width: 1700px;
+  --grid-container-gap: 15px;
+  --grid-col-gap-vertical: 24px;
+  --grid-col-gap-horizontal: 40px;
+  --color-foreground: #000;
+  --color-background: #ffff;
+  --color-primary: #176AB4;
+  --color-red: #EC3237;
+}
+
+body {
+  background-color: #fff;
+  color: var(--color-foreground);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 1272px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--grid-col-gap-vertical) / -2);
+  margin-right: calc(var(--grid-col-gap-vertical) / -2);
+}
+@media (max-width: 991px) {
+  .row {
+    padding: 0 5px;
+  }
+}
+
+.col {
+  width: calc(var(--col-xs) / var(--grid) * 100%);
+  padding-left: calc(var(--grid-col-gap-vertical) / 2);
+  padding-right: calc(var(--grid-col-gap-vertical) / 2);
+  padding-top: calc(var(--grid-col-gap-horizontal) / 2);
+  padding-bottom: calc(var(--grid-col-gap-horizontal) / 2);
+}
+@media (max-width: 991px) {
+  .col {
+    padding-left: calc(var(--grid-col-gap-vertical) / 3);
+    padding-right: calc(var(--grid-col-gap-vertical) / 3);
+    padding-top: calc(var(--grid-col-gap-horizontal) / 3);
+    padding-bottom: calc(var(--grid-col-gap-horizontal) / 3);
+  }
+}
+
+@media (min-width: 390px) {
+  .col {
+    width: calc(var(--col-xs) / var(--grid) * 100%);
+  }
+}
+@media (min-width: 768px) {
+  .col {
+    width: calc(var(--col-md) / var(--grid) * 100%);
+  }
+}
+@media (min-width: 992px) {
+  .col {
+    width: calc(var(--col-lg) / var(--grid) * 100%);
+  }
+}
+@media (min-width: 1200px) {
+  .col {
+    width: calc(var(--col-xl) / var(--grid) * 100%);
+  }
+}/*# sourceMappingURL=style.css.map */
