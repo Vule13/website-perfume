@@ -1,19 +1,34 @@
 // Components
-@import './components/_footer';
-@import './components/_header';
-@import './components/_product';
-@import './components/_title';
-@import './components/blog';
-@import './components/_introduce';
-@import './components/_blog-detail';
+@import "./components/_footer";
+@import "./components/_header";
+@import "./components/_product";
+@import "./components/_title";
+@import "./components/blog";
+@import "./components/_introduce";
+@import "./components/_blog-detail";
 // Page
 
 // Base
-@import './base/_reset';
+@import "./base/_reset";
 
 // Layout
-@import './layout/_grid'
+@import "./layout/_grid";
 
+.page-title {
+  color: var(--color-foreground);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 20px 0 45px;
+  line-height: 21px;
 
+  span {
+    color: var(--color-primary);
+  }
+}
 
-
+.product-layout {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+}

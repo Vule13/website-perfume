@@ -2,7 +2,7 @@ const productData = [
   {
     id: 1,
     name: "Yves Saint Laurent Y EDP",
-    image: "",
+    image: "./assets/Yves Saint Laurent Y EDP.jpg",
     price: 3000000,
     gender: "male",
     brand: "",
@@ -12,7 +12,7 @@ const productData = [
   {
     id: 2,
     name: "YSL Libre EDP Intense",
-    image: "",
+    image: "./assets/YSL Libre EDP Intense.jpg",
     price: 2800000,
     gender: "male",
     brand: "",
@@ -22,7 +22,7 @@ const productData = [
   {
     id: 3,
     name: "Dior Sauvage EDP",
-    image: "",
+    image: "./assets/dior sauvage edp.jpg",
     price: 2650000,
     gender: "male",
     brand: "",
@@ -32,7 +32,7 @@ const productData = [
   {
     id: 4,
     name: "Dior Homme Sport",
-    image: "",
+    image: "./assets/dior-homme-sport-piger.vn_.jpg",
     price: 2650000,
     gender: "male",
     brand: "",
@@ -42,7 +42,7 @@ const productData = [
   {
     id: 5,
     name: "Dior J'Adore",
-    image: "",
+    image: "./assets/Dior J’Adore.jpg",
     price: 2600000,
     gender: "male",
     brand: "",
@@ -52,7 +52,8 @@ const productData = [
   {
     id: 6,
     name: "Roja Elysium Eau Intense",
-    image: "",
+    image:
+      "./assets/nuoc-hoa-nam-roja-parfums-elysium-eau-intense-100ml-piger-vn.jpg",
     price: 2500000,
     gender: "male",
     brand: "",
@@ -62,7 +63,7 @@ const productData = [
   {
     id: 7,
     name: "Chanel Chance EDP",
-    image: "",
+    image: "./assets/Chanel Chance EDT.webp",
     price: 2450000,
     gender: "male",
     brand: "",
@@ -72,7 +73,7 @@ const productData = [
   {
     id: 8,
     name: "Yves Saint Laurent Paris",
-    image: "",
+    image: "./assets/Yves Saint Laurent Paris.jpg",
     price: 2350000,
     gender: "male",
     brand: "",
@@ -82,7 +83,7 @@ const productData = [
   {
     id: 9,
     name: "Miss Dior EDP 2021 ",
-    image: "",
+    image: "./assets/Miss Dior EDP 2021.jpg",
     price: 2300000,
     gender: "male",
     brand: "",
@@ -92,7 +93,7 @@ const productData = [
   {
     id: 10,
     name: "Yves Saint Laurent Black",
-    image: "",
+    image: "./assets/Yves Saint Laurent Black.jpg",
     price: 2250000,
     gender: "male",
     brand: "",
@@ -102,7 +103,7 @@ const productData = [
   {
     id: 11,
     name: "Roja Parfums Enigma",
-    image: "",
+    image: "./assets/Roja Parfums Enigma.jpg",
     price: 2250000,
     gender: "male",
     brand: "",
@@ -112,7 +113,7 @@ const productData = [
   {
     id: 12,
     name: "Chanel Coco EDP",
-    image: "",
+    image: "./assets/Chanel Coco EDP.webp",
     price: 2200000,
     gender: "male",
     brand: "",
@@ -122,7 +123,7 @@ const productData = [
   {
     id: 13,
     name: "Chanel Coco Mademoiselle",
-    image: "",
+    image: "./assets/Chanel Coco Mademoiselle.webp",
     price: 1900000,
     gender: "male",
     brand: "",
@@ -132,7 +133,7 @@ const productData = [
   {
     id: 14,
     name: "Roja Elixir Pour Femme",
-    image: "",
+    image: "./assets/26.webp",
     price: 1850000,
     gender: "male",
     brand: "",
@@ -142,7 +143,7 @@ const productData = [
   {
     id: 15,
     name: "Chanel Bleu De Chanel EDP",
-    image: "",
+    image: "./assets/Chanel Bleu De Chanel EDP.jpg",
     price: 1450000,
     gender: "male",
     brand: "",
