@@ -55,7 +55,7 @@ const footer = () => {
             <h3 class="footer-title">Chính sách</h3>
             <ul class="footer-list">
               <li class="footer-item">
-                <a class="footer-item_link" href="#"
+                <a class="footer-item_link" href="policy.html"
                   >Chính sách đổi trả - bảo hành</a
                 >
               </li>

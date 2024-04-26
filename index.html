@@ -1,22 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="app">
-      <main></main>
-    </div>
 
-    <script src="./script/script.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <main>
+      <!-- section slideshow -->
+      <section>
+        <div class="slideshow">
+          <div class="slideshow_box slideshow_box--fade">
+            <img src="./images/slideshow1.jpg">
+          </div>
+          <div class="slideshow_box slideshow_box--fade">
+            <img src="./images/slideshow2.jpg">
+          </div>
+        </div>
+        <br>
+        <div class="slideshow_paginate" style="text-align:center">
+          <span class="slideshow_dot"></span>
+          <span class="slideshow_dot"></span>
+        </div>
+      </section>
+      <!-- product new -->
+      <section style="padding-top: 47px;">
+        <div class="container">
+          <h2 class="title-content">SẢN PHẨM MỚI NHẤT</h2>
+          <div>
+            <div id="product2" class="row"></div>
+            <a href="product.html" class="link-item">
+              Xem tất cả >>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section style="padding-top: 38px;">
+        <div class="container">
+          <h2 class="title-content">SẢN PHẨM BÁN CHẠY</h2>
+          <div>
+            <div id="product" class="row"></div>
+            <a href="product.html" class="link-item">
+              Xem tất cả >>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- blog -->
+      <section style="padding-top: 38px;">
+        <div class="container">
+          <div class="row">
+            <div class="col" style="--col-xl: 4">
+              <a href="blog.html" class="blog-box">
+                <div class="blog-box_img">
+                  <img src="./images/blog1.jpg" alt="blog">
+                </div>
+                <div class="blog-box_content">
+                  <h4 class="blog-box__title">Nước hoa Coco Chanel </h4>
+                  <div class="blog-box_description">Không giống như một món trang sức đắt tiền chỉ để mọi người ngắm
+                    nhìn và xuýt xoa, nước hoa tạo ra
+                    một khát khao mãnh liệt cho những người đứng ...</div>
+                </div>
+              </a>
+            </div>
+            <div class="col" style="--col-xl: 4">
+              <a href="blog.html" class="blog-box">
+                <div class="blog-box_img">
+                  <img src="./images/blog2.jpg" alt="blog">
+                </div>
+                <div class="blog-box_content">
+                  <h4 class="blog-box__title">Top 6 + Nước Hoa Nam Mùi Gỗ Được Yêu Thích Nhất 2024 </h4>
+                  <div class="blog-box_description">Nước hoa nam mùi gỗ là một trong những hương
+                    nước hoa được các đấng mày râu yêu thích và sử dụng nhiều nhất. Bởi nước mùi gỗ thường mang ...
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col" style="--col-xl: 4">
+              <a href="blog.html" class="blog-box">
+                <div class="blog-box_img">
+                  <img src="./images/blog3.jpg" alt="blog">
+                </div>
+                <div class="blog-box_content">
+                  <h4 class="blog-box__title">Nước hoa Kilian mùi nào thơm nhất? Review Top 5 chai thơm nhất</h4>
+                  <div class="blog-box_description">Không chỉ sở hữu thiết kế sang trọng,đầy tính thẩm mỹ mà nước hoa
+                    nhà Kilian còn sở hữu hương thơm vô cùng giá trị. Vậy nước hoa Kilian của ...</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- brand -->
+      <section style="padding-top: 38px;">
+        <div class="container">
+          <div class="row">
+            <div class="col" style="--col-xl: 3">
+              <div class="brand-box">
+                <img src="./images/brand-chanel.png" alt="brand-chanel">
+              </div>
+            </div>
+            <div class="col" style="--col-xl: 3">
+              <div class="brand-box">
+                <img src="./images/brand-dior.png" alt="brand-chanel">
+              </div>
+            </div>
+            <div class="col" style="--col-xl: 3">
+              <div class="brand-box">
+                <img src="./images/brand-ysl.png" alt="brand-chanel">
+              </div>
+            </div>
+            <div class="col" style="--col-xl: 3">
+              <div class="brand-box">
+                <img src="./images/brand-par.png" alt="brand-chanel">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script/script.js" type="module"></script>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slideshow_box");
+      let dots = document.getElementsByClassName("slideshow_dot");
+      for (i = 0;i < slides.length;i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0;i < dots.length;i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+
 </html>
