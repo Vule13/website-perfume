@@ -9,13 +9,13 @@ export const products = (isPage) => {
   switch (isPage) {
     case "home":
       productHome.forEach((item) => {
-        product += productItem(item);
+        product += productItem(item, 3);
       });
       break;
 
     default:
       productData.forEach((item) => {
-        product += productItem(item);
+        product += productItem(item, 4);
       });
       break;
   }

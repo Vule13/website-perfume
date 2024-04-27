@@ -1,8 +1,8 @@
 import { formatNumber } from "../utils/formatNumber.js";
 
-const productItem = (data) => {
+const productItem = (data, col) => {
   return `
-  <div class="col" style="--col-xl: 4;">
+  <div class="col" style="--col-xl: ${col};">
     <a href="./product-detail.html" class="product-item" >
       <div class="product-item_img">
         <img src="${data.image}" alt="${data.name}" />
