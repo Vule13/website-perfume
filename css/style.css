@@ -379,7 +379,6 @@
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -497,6 +496,74 @@
 }
 .introduction_list-item .introduction_item {
   list-style: unset;
+}
+
+.contact_title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+.contact_content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.contact_desc {
+  font-size: 20px;
+  padding-top: 2px;
+  padding-bottom: 23px;
+}
+
+.contact_right {
+  max-width: 734px;
+  width: 100%;
+}
+
+.contact_form label {
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  padding-bottom: 11px;
+  padding-top: 27px;
+}
+.contact_form label span {
+  color: var(--color-red);
+}
+.contact_form label:first-child {
+  padding-top: unset;
+}
+.contact_form input, .contact_form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 1.2;
+  border: 1px solid #C4C4C4;
+}
+.contact_form input:focus-visible, .contact_form textarea:focus-visible {
+  outline: none;
+}
+.contact_form textarea {
+  min-height: 240px;
+}
+
+.button-submit {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 12px 34px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  float: right;
+  margin-top: 26px;
+}
+
+.contact {
+  border: 1px solid #C4C4C4;
+  padding: 0 20px;
 }
 
 * {
@@ -638,6 +705,4 @@ li {
 .product-layout {
   display: grid;
   grid-template-columns: 3fr 9fr;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

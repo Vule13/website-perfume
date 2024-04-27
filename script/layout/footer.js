@@ -60,15 +60,15 @@ const footer = () => {
                 >
               </li>
               <li class="footer-item">
-                <a class="footer-item_link" href="#"
+                <a class="footer-item_link" href="security-policy.html"
                   >Chính sách bảo mật thông tin</a
                 >
               </li>
               <li class="footer-item">
-                <a class="footer-item_link" href="#">Chính sách vận chuyển</a>
+                <a class="footer-item_link" href="shipping-policy.html">Chính sách vận chuyển</a>
               </li>
               <li class="footer-item">
-                <a class="footer-item_link" href="#">Hướng dẫn mua hàng</a>
+                <a class="footer-item_link" href="shopping-guide.html">Hướng dẫn mua hàng</a>
               </li>
             </ul>
           </div>

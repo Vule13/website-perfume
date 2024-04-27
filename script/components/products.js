@@ -1,5 +1,5 @@
 import { productItem } from "./productItem.js";
-import { productData, productHome } from "../data/data.js";
+import { productData, productHome, productHome2 } from "../data/data.js";
 
 export const products = (isPage, productSoft) => {
   let product = "";
@@ -12,7 +12,11 @@ export const products = (isPage, productSoft) => {
         product += productItem(item, 3);
       });
       break;
-
+    case "home2":
+      productHome2.forEach((item) => {
+        product += productItem(item, 3);
+      });
+      break;
     default:
       softProduct.forEach((item) => {
         product += productItem(item, 4);
