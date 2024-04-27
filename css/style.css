@@ -528,13 +528,9 @@
   font-weight: 600;
   display: block;
   padding-bottom: 11px;
-  padding-top: 27px;
 }
 .contact_form label span {
   color: var(--color-red);
-}
-.contact_form label:first-child {
-  padding-top: unset;
 }
 .contact_form input, .contact_form textarea {
   width: 100%;
@@ -559,6 +555,10 @@
   font-weight: 700;
   float: right;
   margin-top: 26px;
+}
+
+.contact_form-box {
+  padding-top: 27px;
 }
 
 .contact {

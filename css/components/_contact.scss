@@ -32,11 +32,8 @@
       color: var(--color-red);
     }
     padding-bottom: 11px;
-    padding-top: 27px;
-    &:first-child {
-      padding-top: unset;
-    }
   }
+
   input, textarea {
     width: 100%;
     padding: 15px;
@@ -47,6 +44,7 @@
       outline: none;
     }
   }
+  
   textarea {
     min-height: 240px;
   }
@@ -61,6 +59,10 @@
   font-weight: 700;
   float: right;
   margin-top: 26px;
+}
+
+.contact_form-box {
+  padding-top: 27px;
 }
 
 .contact {
