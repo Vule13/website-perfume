@@ -3,7 +3,7 @@ import { formatNumber } from "../utils/formatNumber.js";
 const productItem = (data) => {
   return `
   <div class="col" style="--col-xl: 4;">
-    <div class="product-item" >
+    <a href="./product-detail.html" class="product-item" >
       <div class="product-item_img">
         <img src="${data.image}" alt="${data.name}" />
       </div>
@@ -28,7 +28,7 @@ const productItem = (data) => {
           </span>
         </div>
       </div>
-    </div>
+    </a>
   </div>
     `;
 };

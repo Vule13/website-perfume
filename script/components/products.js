@@ -1,11 +1,24 @@
 import { productItem } from "./productItem.js";
-import { productData } from "../data/data.js";
+import { productData, productHome } from "../data/data.js";
 
-export const products = () => {
+import { filterProducts } from "../utils/fillterProduct.js";
+
+export const products = (isPage) => {
   let product = "";
-  productData.forEach((item) => {
-    product += productItem(item);
-  });
+
+  switch (isPage) {
+    case "home":
+      productHome.forEach((item) => {
+        product += productItem(item);
+      });
+      break;
+
+    default:
+      productData.forEach((item) => {
+        product += productItem(item);
+      });
+      break;
+  }
 
   return product;
 };

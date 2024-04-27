@@ -35,3 +35,31 @@ export function filterProducts(selectedValues) {
 
   return filteredProducts;
 }
+
+function quickSort(arr, cdt) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const pivot = arr[arr.length - 1];
+  const leftArr = [];
+  const rightArr = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (cdt) {
+      if (arr[i].price < pivot.price) {
+        leftArr.push(arr[i]);
+      } else {
+        rightArr.push(arr[i]);
+      }
+    } else {
+      if (arr[i].price > pivot.price) {
+        leftArr.push(arr[i]);
+      } else {
+        rightArr.push(arr[i]);
+      }
+    }
+  }
+
+  return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+}

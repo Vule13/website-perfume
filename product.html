@@ -19,7 +19,46 @@
           <h2 class="page-title">Trang chủ > <span>Sản phẩm</span></h2>
           <div class="product-layout">
             <div id="sidebar"></div>
-            <div id="product" class="row"></div>
+
+            <div class="product">
+              <div class="product-filter">
+                <div class="product-filter_title">Giá từ cao đên thấp</div>
+                <div class="product-filter_content">
+                  <div class="product-filter_subtitle">Sắp xếp theo</div>
+                  <select class="product-filter_select">
+                    <option default="md">Mặc định</option>
+                    <option value="htl">Giá từ cao đến thấp</option>
+                    <option value="lth">Giá từ thấp đến cao</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="product" data="product" class="row"></div>
+
+              <div class="pagination">
+                <a class="pagination-link" href="">
+                  <span class="pagination-item"><</span>
+                </a>
+                <a class="pagination-link pagination-link--active" href="">
+                  <span class="pagination-item">1</span>
+                </a>
+                <a class="pagination-link" href="">
+                  <span class="pagination-item">2</span>
+                </a>
+                <a class="pagination-link" href="">
+                  <span class="pagination-item">3</span>
+                </a>
+                <a class="pagination-link" href="">
+                  <span class="pagination-item">4</span>
+                </a>
+                <a class="pagination-link" href="">
+                  <span class="pagination-item">5</span>
+                </a>
+                <a class="pagination-link" href="">
+                  <span class="pagination-item">></span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </main>

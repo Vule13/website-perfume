@@ -16,7 +16,3 @@ if (sidebarContent) sidebarContent.innerHTML = sidebar();
 // product
 const productContent = document.querySelector("#product");
 if (productContent) productContent.innerHTML = products();
-
-// product
-const productContent2 = document.querySelector("#product2");
-if (productContent2) productContent2.innerHTML = products2();
