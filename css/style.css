@@ -234,82 +234,6 @@
   justify-content: center;
 }
 
-.slideshow_box {
-  display: none;
-}
-.slideshow_box img {
-  width: 100%;
-}
-
-/* Slideshow container */
-.slideshow {
-  position: relative;
-}
-
-/* The dots/bullets/indicators */
-.slideshow_dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 6px;
-  background-color: #BBB7B7;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: var(--color-primary);
-}
-
-/* Fading animation */
-.slideshow_box--fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.title-content {
-  font-size: 24px;
-  padding-bottom: 2px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.introduction-heading {
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  padding-bottom: 18px;
-}
-
-.introduction_title {
-  font-size: 24px;
-  font-weight: 700;
-  padding-bottom: 35px;
-}
-
-.introduction_content p {
-  padding-bottom: 35px;
-  font-size: 24px;
-}
-
-.introduction_list-item {
-  font-size: 24px;
-  margin-left: 30px;
-  padding-bottom: 30px;
-}
-.introduction_list-item .introduction_item {
-  list-style: unset;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -449,4 +373,6 @@ li {
 .product-layout {
   display: grid;
   grid-template-columns: 3fr 9fr;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
