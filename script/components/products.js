@@ -1,10 +1,10 @@
 import { productItem } from "./productItem.js";
 import { productData, productHome } from "../data/data.js";
 
-import { filterProducts } from "../utils/fillterProduct.js";
-
-export const products = (isPage) => {
+export const products = (isPage, productSoft) => {
   let product = "";
+
+  let softProduct = productSoft || productData;
 
   switch (isPage) {
     case "home":
@@ -14,7 +14,7 @@ export const products = (isPage) => {
       break;
 
     default:
-      productData.forEach((item) => {
+      softProduct.forEach((item) => {
         product += productItem(item, 4);
       });
       break;
