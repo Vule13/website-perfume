@@ -53,12 +53,13 @@
 .button-submit {
   background-color: var(--color-primary);
   border: none;
-  padding: 12px 34px;
+  padding: 12px 60px;
   color: #fff;
   font-size: 20px;
   font-weight: 700;
   float: right;
   margin-top: 26px;
+  cursor: pointer;
 }
 
 .contact_form-box {

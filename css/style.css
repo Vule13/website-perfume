@@ -550,12 +550,13 @@
 .button-submit {
   background-color: var(--color-primary);
   border: none;
-  padding: 12px 34px;
+  padding: 12px 60px;
   color: #fff;
   font-size: 20px;
   font-weight: 700;
   float: right;
   margin-top: 26px;
+  cursor: pointer;
 }
 
 .contact_form-box {
@@ -905,6 +906,217 @@ th:last-child {
 .product-instruction {
   border: 1px solid #bbb7b7;
   padding: 9.59px 20.25px;
+.sign-in_title,
+.forgot-password_title,
+.login_title {
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 56px;
+}
+
+.sign-in_form,
+.forgot-password_form,
+.login_form {
+  width: 100%;
+  text-align: center;
+}
+.sign-in_form .sign-in_form-box,
+.sign-in_form .forgot-password_form-box,
+.sign-in_form .login_form-box,
+.forgot-password_form .sign-in_form-box,
+.forgot-password_form .forgot-password_form-box,
+.forgot-password_form .login_form-box,
+.login_form .sign-in_form-box,
+.login_form .forgot-password_form-box,
+.login_form .login_form-box {
+  margin-top: 24px;
+  position: relative;
+}
+.sign-in_form .sign-in_form-box input,
+.sign-in_form .forgot-password_form-box input,
+.sign-in_form .login_form-box input,
+.forgot-password_form .sign-in_form-box input,
+.forgot-password_form .forgot-password_form-box input,
+.forgot-password_form .login_form-box input,
+.login_form .sign-in_form-box input,
+.login_form .forgot-password_form-box input,
+.login_form .login_form-box input {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 1.2;
+  border: 1px solid #c4c4c4;
+}
+.sign-in_form .sign-in_form-box input:focus-visible,
+.sign-in_form .forgot-password_form-box input:focus-visible,
+.sign-in_form .login_form-box input:focus-visible,
+.forgot-password_form .sign-in_form-box input:focus-visible,
+.forgot-password_form .forgot-password_form-box input:focus-visible,
+.forgot-password_form .login_form-box input:focus-visible,
+.login_form .sign-in_form-box input:focus-visible,
+.login_form .forgot-password_form-box input:focus-visible,
+.login_form .login_form-box input:focus-visible {
+  outline: none;
+}
+.sign-in_form .sign-in_form-box label,
+.sign-in_form .forgot-password_form-box label,
+.sign-in_form .login_form-box label,
+.forgot-password_form .sign-in_form-box label,
+.forgot-password_form .forgot-password_form-box label,
+.forgot-password_form .login_form-box label,
+.login_form .sign-in_form-box label,
+.login_form .forgot-password_form-box label,
+.login_form .login_form-box label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s;
+  transform-origin: 0 0;
+  color: #000;
+  font-size: 20px;
+  left: 15px;
+}
+.sign-in_form .sign-in_form-box label:focus,
+.sign-in_form .forgot-password_form-box label:focus,
+.sign-in_form .login_form-box label:focus,
+.forgot-password_form .sign-in_form-box label:focus,
+.forgot-password_form .forgot-password_form-box label:focus,
+.forgot-password_form .login_form-box label:focus,
+.login_form .sign-in_form-box label:focus,
+.login_form .forgot-password_form-box label:focus,
+.login_form .login_form-box label:focus {
+  transform: translateY(-20px) scale(0.5);
+}
+.sign-in_form .sign-in_form-box label span,
+.sign-in_form .forgot-password_form-box label span,
+.sign-in_form .login_form-box label span,
+.forgot-password_form .sign-in_form-box label span,
+.forgot-password_form .forgot-password_form-box label span,
+.forgot-password_form .login_form-box label span,
+.login_form .sign-in_form-box label span,
+.login_form .forgot-password_form-box label span,
+.login_form .login_form-box label span {
+  color: var(--color-red);
+  cursor: pointer;
+}
+.sign-in_form .sign-in_form-box svg,
+.sign-in_form .forgot-password_form-box svg,
+.sign-in_form .login_form-box svg,
+.forgot-password_form .sign-in_form-box svg,
+.forgot-password_form .forgot-password_form-box svg,
+.forgot-password_form .login_form-box svg,
+.login_form .sign-in_form-box svg,
+.login_form .forgot-password_form-box svg,
+.login_form .login_form-box svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+.sign-in_form .sign-in_form-box input:focus + label,
+.sign-in_form .forgot-password_form-box input:focus + label,
+.sign-in_form .login_form-box input:focus + label,
+.forgot-password_form .sign-in_form-box input:focus + label,
+.forgot-password_form .forgot-password_form-box input:focus + label,
+.forgot-password_form .login_form-box input:focus + label,
+.login_form .sign-in_form-box input:focus + label,
+.login_form .forgot-password_form-box input:focus + label,
+.login_form .login_form-box input:focus + label {
+  transform: translateY(-20px) scale(0.5);
+}
+
+.sign-in,
+.forgot-password,
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 88px;
+  max-width: 624px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sign-in_button,
+.forgot-password_button,
+.login_button {
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.sign-in_button span,
+.forgot-password_button span,
+.login_button span {
+  color: var(--color-primary);
+}
+
+.login_form .button-submit {
+  float: unset;
+}
+
+.login_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 24px;
+}
+.login_button a {
+  color: var(--color-primary);
+}
+
+.login_span {
+  color: #606162;
+  font-size: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+}
+.login_span::after {
+  content: "";
+  width: 72px;
+  height: 1px;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(50%);
+}
+.login_span::before {
+  content: "";
+  width: 72px;
+  height: 1px;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.login_social-gg {
+  border: 1px solid #176ab4;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 155px;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.login_social-face {
+  border: 1px solid #176ab4;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 146px;
+  gap: 9px;
+  cursor: pointer;
+  margin-top: 24px;
 }
 
 * {
