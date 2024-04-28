@@ -17,18 +17,20 @@ if (sidebarContent) sidebarContent.innerHTML = sidebar();
 
 // get element product
 const productContent = document.querySelector("#product");
+const productContent2 = document.querySelector("#product2");
 
 // check page
 const isPage = document.querySelector("#product").getAttribute("data");
 
 // function render product
-const renderProduct = (product) => {
-  if (productContent) {
-    productContent.innerHTML = product;
+const renderProduct = (product, productEl) => {
+  if (productEl) {
+    productEl.innerHTML = product;
   }
 };
 
-renderProduct(products(isPage));
+renderProduct(products(isPage), productContent);
+renderProduct(products(isPage), productContent2);
 
 //
 const softTitle = document.querySelector(".product-filter_title");
@@ -36,27 +38,28 @@ const softTitle = document.querySelector(".product-filter_title");
 
 // select filter
 const selectValue = document.querySelector(".product-filter_select");
-selectValue.addEventListener("change", (e) => {
-  const selectedOption = e.target.value;
-  let softProduct = [];
+selectValue &&
+  selectValue.addEventListener("change", (e) => {
+    const selectedOption = e.target.value;
+    let softProduct = [];
 
-  switch (selectedOption) {
-    case "htl":
-      softTitle.innerHTML = "Giá từ cao đến thấp";
-      softProduct = quickSort(productData, true);
-      break;
-    case "lth":
-      softTitle.innerHTML = "Giá từ thấp đến cao";
-      softProduct = quickSort(productData, false);
-      break;
+    switch (selectedOption) {
+      case "htl":
+        softTitle.innerHTML = "Giá từ cao đến thấp";
+        softProduct = quickSort(productData, true);
+        break;
+      case "lth":
+        softTitle.innerHTML = "Giá từ thấp đến cao";
+        softProduct = quickSort(productData, false);
+        break;
 
-    default:
-      softTitle.innerHTML = "Tất cả sản phẩm";
-      softProduct = productData;
-      break;
-  }
-  renderProduct(products(isPage, softProduct));
-});
+      default:
+        softTitle.innerHTML = "Tất cả sản phẩm";
+        softProduct = productData;
+        break;
+    }
+    renderProduct(products(isPage, softProduct), productContent);
+  });
 
 // check box filter
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -75,7 +78,7 @@ checkboxes.forEach((checkbox) =>
 
     if (selectedValues.length === 0) {
       softTitle.innerHTML = `Tất cả sản phẩm`;
-      renderProduct(products(isPage));
+      renderProduct(products(isPage), productContent);
       return;
     }
 
@@ -87,6 +90,6 @@ checkboxes.forEach((checkbox) =>
 
     const softProduct = filterProducts(productData, selectedValues);
 
-    renderProduct(products(isPage, softProduct));
+    renderProduct(products(isPage, softProduct), productContent);
   })
 );
