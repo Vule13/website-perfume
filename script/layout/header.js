@@ -23,9 +23,9 @@ const header = () => {
       <div class="header-card">
         <img src="./assets/Giỏ hàng.png" alt="cart" />
       </div>
-      <div class="header-account">
+      <a href="sign-in.html" class="header-account">
         <img src="./assets/user.png" alt="account" />
-      </div>
+      </a>
     </div>
   </div>
   <nav class="header-bottom">
