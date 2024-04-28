@@ -20,7 +20,8 @@ const productContent = document.querySelector("#product");
 const productContent2 = document.querySelector("#product2");
 
 // check page
-const isPage = document.querySelector("#product").getAttribute("data");
+const isPage = document.querySelector("#product")?.getAttribute("data");
+const isPage2 = document.querySelector("#product2")?.getAttribute("data");
 
 // function render product
 const renderProduct = (product, productEl) => {
@@ -30,7 +31,7 @@ const renderProduct = (product, productEl) => {
 };
 
 renderProduct(products(isPage), productContent);
-renderProduct(products(isPage), productContent2);
+renderProduct(products(isPage2), productContent2);
 
 //
 const softTitle = document.querySelector(".product-filter_title");

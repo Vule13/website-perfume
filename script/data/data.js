@@ -210,7 +210,7 @@ const productHome = [
     brand: "",
     category: "",
     day: "2023-12-25",
-  }
+  },
 ];
 
 const productHome2 = [
@@ -285,7 +285,49 @@ const productHome2 = [
     brand: "Yves Saint Laurent",
     category: "niche-perfume",
     day: "2023-01-01",
-  }
+  },
+];
+
+const productRelated = [
+  {
+    id: 1,
+    name: "Dior Sauvage EDP",
+    image:
+      "./assets/nautica-voyage-by-nautica-for-men-edt-100ml_1-600x600 1.png",
+    price: 2650000,
+    brand: "Dior",
+    category: "niche-perfume",
+    day: "2023-06-21",
+  },
+  {
+    id: 2,
+    name: "Yves Saint Laurent Y EDP",
+    image: "./assets/Yves Saint Laurent Y EDP.jpg",
+    price: 3000000,
+    brand: "Chanel",
+    category: "male-perfume",
+    day: "2023-05-12",
+  },
+  {
+    id: 3,
+    name: "Roja Elysium Eau Intense",
+    image:
+      "./assets/nuoc-hoa-nam-roja-parfums-elysium-eau-intense-100ml-piger-vn.jpg",
+    price: 2500000,
+    brand: "Dior",
+    category: "female-perfume",
+    day: "2023-08-09",
+  },
+  {
+    id: 4,
+    name: "Yves Saint Laurent Black",
+    image: "./assets/Yves Saint Laurent Black.jpg",
+    price: 2250000,
+    brand: "Roja",
+    category: "unisex-perfume",
+    day: "2023-07-04",
+    day: "2023-07-04",
+  },
 ];
 
 const sideBarValues = [
@@ -354,4 +396,10 @@ const sideBarValues = [
   },
 ];
 
-export { productData, sideBarValues, productHome, productHome2 };
+export {
+  productData,
+  sideBarValues,
+  productHome,
+  productHome2,
+  productRelated,
+};
