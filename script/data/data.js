@@ -210,7 +210,7 @@ const productHome = [
     brand: "",
     category: "",
     day: "2023-12-25",
-  }
+  },
 ];
 
 const productHome2 = [
@@ -285,7 +285,7 @@ const productHome2 = [
     brand: "Yves Saint Laurent",
     category: "niche-perfume",
     day: "2023-01-01",
-  }
+  },
 ];
 
 const sideBarValues = [
