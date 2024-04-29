@@ -49,7 +49,8 @@
       transform: translateY(-50%);
       right: 15px;
     }
-    input:focus + label {
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
       transform: translateY(-20px) scale(0.5);
     }
   }
@@ -58,6 +59,7 @@
 .sign-in,
 .forgot-password,
 .login {
+  padding-bottom: 77px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,4 +149,47 @@
   gap: 9px;
   cursor: pointer;
   margin-top: 24px;
+}
+
+.show-password,
+.show-repassword, .show-repassword2 {
+  .icon-show-password {
+    display: none;
+  }
+  cursor: pointer;
+}
+
+.show-icon-pw {
+  .icon-show-password {
+    display: unset;
+  }
+  .icon-hiden-password {
+    display: none;
+  }
+}
+
+.form-description {
+  color: #606162;
+  font-size: 18px;
+  text-align: left;
+  padding: 18px 0;
+}
+
+.forgot-password_subtitle {
+  font-size: 24px;
+  padding-top: 26px;
+  padding-bottom: 16px;
+}
+
+.forgot-password_description {
+  text-align: center;
+  font-size: 15px;
+  color: #606162;
+  padding-bottom: 20px;
+}
+
+.forgot-password_prev {
+  span {
+    color: var(--color-primary);
+  }
 }

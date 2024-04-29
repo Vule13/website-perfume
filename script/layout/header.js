@@ -23,8 +23,8 @@ const header = () => {
       <div class="header-card">
         <img src="./assets/Giỏ hàng.png" alt="cart" />
       </div>
-      <a href="sign-in.html" class="header-account">
-        <img src="./assets/user.png" alt="account" />
+      <a href="account.html" class="header-account">
+        <img id="avata" src="./assets/user.png" alt="account" />
       </a>
     </div>
   </div>
