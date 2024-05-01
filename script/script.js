@@ -1,9 +1,17 @@
 import { layout } from "./layout/layout.js";
 import { products } from "./components/products.js";
 import { sidebar } from "./components/sidebar.js";
-import { filterProducts, quickSort } from "./utils/filterProduct.js";
+import {
+  filterProducts,
+  quickSort,
+  searchFilter,
+} from "./utils/filterProduct.js";
 import { productData } from "./data/data.js";
 import { translatedValues } from "./utils/translateTitle.js";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "./utils/localStorage.js";
 
 const body = document.querySelector("main");
 const app = document.querySelector("#app");
@@ -85,8 +93,6 @@ checkboxes.forEach((checkbox) =>
 
     let translatedTitle = translatedValues(selectedValues);
 
-    console.log(translatedTitle);
-
     softTitle.innerHTML = `${translatedTitle.join(", ")}`;
 
     const softProduct = filterProducts(productData, selectedValues);
@@ -94,3 +100,32 @@ checkboxes.forEach((checkbox) =>
     renderProduct(products(isPage, softProduct), productContent);
   })
 );
+
+// search product
+
+const searchValue = document.querySelector("#search");
+
+const button = document.querySelector(".header-search_button");
+const totalResults = document.querySelector(".search_total-result");
+const keyword = document.querySelector(".page-title >span");
+
+let searchKeyword = "";
+searchValue.addEventListener("change", (e) => {
+  searchKeyword = e.target.value;
+});
+
+button.addEventListener("click", () => {
+  if (searchKeyword) {
+    saveToLocalStorage("searchResult", searchKeyword);
+  }
+});
+
+if (isPage === "search-product") {
+  let searchKeyword = getFromLocalStorage("searchResult");
+  keyword.innerHTML = `Kết quả tìm kiếm cho "${searchKeyword}"`;
+
+  const searchArr = searchFilter(productData, searchKeyword);
+  renderProduct(products(isPage, searchArr), productContent);
+  if (searchArr)
+    totalResults.innerHTML = `Có ${searchArr.length} kết quả phù hợp`;
+}

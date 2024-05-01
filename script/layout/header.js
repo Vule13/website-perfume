@@ -9,15 +9,16 @@ const header = () => {
       <input
         class="header-search_input"
         type="text"
+        id="search"
         placeholder="Tìm kiếm sản phẩm"
       />
-      <button class="header-search_button">
+      <a href="./searchPage.html" class="header-search_button">
         <img
           class="header-search_icon"
           src="./assets/search.png"
           alt="search-icon"
         />
-      </button>
+      </a>
     </div>
     <div class="header-right" style="--col-xl: 2">
       <div class="header-card">

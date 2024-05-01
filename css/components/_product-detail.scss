@@ -415,7 +415,7 @@ th:last-child {
 
 .product-description_detail-list {
   margin: 23.05px 0;
-  list-style: disc;
+  padding-left: 32px;
 }
 
 .product-description_detail-item {
@@ -424,6 +424,7 @@ th:last-child {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  list-style: disc;
 }
 
 //

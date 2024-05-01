@@ -568,6 +568,25 @@
   padding: 0 20px;
 }
 
+.search_result {
+  margin-top: 39px;
+  min-height: 32vh;
+}
+
+.search_total-result {
+  text-align: center;
+  color: #000;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 9px;
+}
+
+.search_product {
+  margin-bottom: 56px;
+}
+
 .sign-in_title,
 .forgot-password_title,
 .login_title {
@@ -1172,7 +1191,7 @@ th:last-child {
 
 .product-description_detail-list {
   margin: 23.05px 0;
-  list-style: disc;
+  padding-left: 32px;
 }
 
 .product-description_detail-item {
@@ -1181,6 +1200,7 @@ th:last-child {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  list-style: disc;
 }
 
 .product-instruction {

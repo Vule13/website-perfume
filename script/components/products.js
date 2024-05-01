@@ -27,6 +27,11 @@ export const products = (isPage, productSoft) => {
         product += productItem(item, 3);
       });
       break;
+    case "search-product":
+      softProduct.forEach((item) => {
+        product += productItem(item, 3);
+      });
+      break;
     default:
       softProduct.forEach((item) => {
         product += productItem(item, 4);
