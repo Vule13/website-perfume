@@ -101,7 +101,6 @@ checkboxes.forEach((checkbox) =>
   })
 );
 
-<<<<<<< HEAD
 // search product
 
 const searchValue = document.querySelector("#search");
@@ -130,47 +129,43 @@ if (isPage === "search-product") {
   if (searchArr)
     totalResults.innerHTML = `Có ${searchArr.length} kết quả phù hợp`;
 }
-=======
 
 // show password
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  var showPasswordButton = document.querySelector('.show-password');
-  var showrePasswordButton = document.querySelector('.show-repassword');
-  var showrePasswordButton2 = document.querySelector('.show-repassword2');
+document.addEventListener("DOMContentLoaded", function () {
+  var showPasswordButton = document.querySelector(".show-password");
+  var showrePasswordButton = document.querySelector(".show-repassword");
+  var showrePasswordButton2 = document.querySelector(".show-repassword2");
   var passwordInput = document.getElementById("password");
   var repasswordInput = document.getElementById("re-password");
   var repasswordInput2 = document.getElementById("re-password2");
 
-  showPasswordButton.addEventListener('click', function() {
-      if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          showPasswordButton.classList.add('show-icon-pw');
-      } else {
-          passwordInput.type = "password";
-          showPasswordButton.classList.remove('show-icon-pw');
-      }
-  });
-  
-  showrePasswordButton.addEventListener('click', function() {
-    if (repasswordInput.type === "password") {
-        repasswordInput.type = "text";
-        showrePasswordButton.classList.add('show-icon-pw');
+  showPasswordButton.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      showPasswordButton.classList.add("show-icon-pw");
     } else {
-        repasswordInput.type = "password";
-        showrePasswordButton.classList.remove('show-icon-pw');
+      passwordInput.type = "password";
+      showPasswordButton.classList.remove("show-icon-pw");
     }
   });
-  showrePasswordButton2.addEventListener('click', function() {
-    if (repasswordInput2.type === "password") {
-        repasswordInput2.type = "text";
-        showrePasswordButton2.classList.add('show-icon-pw');
+
+  showrePasswordButton.addEventListener("click", function () {
+    if (repasswordInput.type === "password") {
+      repasswordInput.type = "text";
+      showrePasswordButton.classList.add("show-icon-pw");
     } else {
-        repasswordInput2.type = "password";
-        showrePasswordButton2.classList.remove('show-icon-pw');
+      repasswordInput.type = "password";
+      showrePasswordButton.classList.remove("show-icon-pw");
+    }
+  });
+  showrePasswordButton2.addEventListener("click", function () {
+    if (repasswordInput2.type === "password") {
+      repasswordInput2.type = "text";
+      showrePasswordButton2.classList.add("show-icon-pw");
+    } else {
+      repasswordInput2.type = "password";
+      showrePasswordButton2.classList.remove("show-icon-pw");
     }
   });
 });
-
->>>>>>> c238b3e965c663398021f9b2b7f587095648b329
