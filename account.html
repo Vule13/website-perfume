@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Tài khoản</title>
+</head>
+
+<body>
+  <div id="app">
+    <main>
+      <div class="container">
+        <h2 class="page-title">
+          Trang chủ > Tài khoản > <span>Thông tin cá nhân</span>
+        </h2>
+        <div class="row account">
+          <div class="col" style="--col-xl:3">
+            <div class="account-left">
+              <div class="account-left_avata">
+                <img src="./images/avata.png" alt="avata">
+                <h3>Lan Anh</h3>
+              </div>
+              <div class="account-left_menu">
+                <a href="account.html" class="account-left__item account-left__item-ac">
+                  <img src="./images/user.png" alt="user">
+                  <span>Thông tin cá nhân</span>
+                </a>
+                <a href="account-password.html" class="account-left__item ">
+                  <img src="./images/lock.png" alt="user">
+                  <span>Đổi mật khẩu</span>
+                </a>
+                <a href="account-order.html" class="account-left__item ">
+                  <img src="./images/cart.png" alt="user">
+                  <span>Đơn hàng</span>
+                </a>
+                <a href="#" class="account-left__item ">
+                  <img src="./images/log-out.png" alt="user">
+                  <span>Đăng xuất</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="--col-xl:9">
+            <h1 class="heading-page">Thông tin cá nhân</h1>
+            <div class="account-right">
+              <div class="account-right_table">
+                <table class="account-right_name">
+                  <tr>
+                    <td>Tên đăng nhập</td>
+                    <td>
+                      <input type="text" value="anh123@gmail.com">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Họ tên</td>
+                    <td>
+                      <input type="text" value="Lan Anh">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Số điện thoại</td>
+                    <td>
+                      <input type="text" value="0965998668">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Địa chỉ</td>
+                    <td>
+                      <input type="text" value="168 Định Công, Hoàng Mai, Hà Nội">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Giới tính</td>
+                    <td class="account-right_input-radio">
+                      <span class="account-right_radio">
+                        <label for="male">Nam</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                      </span>
+                      <span class="account-right_radio">
+                        <label for="female">Nữ</label>
+                        <input type="radio" id="female" name="gender" value="female" checked>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ngày sinh</td>
+                    <td>
+                      <input type="datetime" value="26/2/1999">
+                    </td>
+                  </tr>
+                </table>
+                <a href="" class="button-submit">Lưu lại</a>
+              </div>
+
+              <div class="account-right_img-avata">
+                <img src="./images/avata2.png" alt="avata">
+                <button class="account-right_img-button">Chọn ảnh</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./script/script.js" type="module"></script>
+
+</body>
+
+</html>

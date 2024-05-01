@@ -552,6 +552,7 @@
   border: none;
   padding: 12px 60px;
   color: #fff;
+  display: inline-block;
   font-size: 20px;
   font-weight: 700;
   float: right;
@@ -585,6 +586,166 @@
 
 .search_product {
   margin-bottom: 56px;
+}
+
+.account-left_avata {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.account-left_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.account-left_menu .account-left__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+}
+.account-left_menu .account-left__item-ac {
+  color: var(--color-primary);
+}
+
+.account-right {
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  justify-content: space-between;
+  border: 1px solid #BBB7B7;
+  gap: 58px;
+}
+
+.account-right_table {
+  width: 100%;
+  flex: 1;
+}
+
+.account-right_name td {
+  border: unset;
+  width: unset;
+  padding: 15px 0 !important;
+}
+.account-right_name td:first-child {
+  padding-right: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.account-right_name input[type=text] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+}
+.account-right_name input[type=text]:focus {
+  outline: unset;
+}
+.account-right_name input[type=datetime] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+}
+.account-right_name input[type=datetime]:focus {
+  outline: unset;
+}
+.account-right_name input[type=radio] {
+  width: 24px;
+  height: 24px;
+}
+
+.account-right_radio {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.account-right_input-radio {
+  display: flex;
+  gap: 126px;
+}
+
+.account-right_img-avata {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+}
+.account-right_img-avata .account-right_img-button {
+  background-color: unset;
+  padding: 7px 26px;
+  border: 1px solid #606162;
+  cursor: pointer;
+}
+
+.heading-page {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 45px;
+}
+
+.account-order {
+  border: 1px solid #BBB7B7;
+}
+.account-order td, .account-order th {
+  border: unset;
+  width: unset;
+  padding: unset;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+}
+.account-order th {
+  border-bottom: 1px solid #BBB7B7;
+}
+
+.account-left_avata {
+  font-size: 30px;
+}
+
+.account-right_check-password .login_form-box {
+  margin-top: 24px;
+  position: relative;
+}
+.account-right_check-password .login_form-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  border: 1px solid #c4c4c4;
+}
+.account-right_check-password .login_form-box input:focus-visible {
+  outline: none;
+}
+.account-right_check-password .login_form-box label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s;
+  transform-origin: 0 0;
+  color: #000;
+  font-size: 20px;
+  left: 15px;
+}
+.account-right_check-password .login_form-box label:focus {
+  transform: translateY(-20px) scale(0.5);
+}
+.account-right_check-password .login_form-box label span {
+  color: var(--color-red);
+  cursor: pointer;
+}
+.account-right_check-password .login_form-box svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+.account-right_check-password .login_form-box input:focus + label,
+.account-right_check-password .login_form-box input:not(:placeholder-shown) + label {
+  transform: translateY(-20px) scale(0.5);
 }
 
 .sign-in_title,
@@ -695,20 +856,30 @@
   right: 15px;
 }
 .sign-in_form .sign-in_form-box input:focus + label,
+.sign-in_form .sign-in_form-box input:not(:placeholder-shown) + label,
 .sign-in_form .forgot-password_form-box input:focus + label,
+.sign-in_form .forgot-password_form-box input:not(:placeholder-shown) + label,
 .sign-in_form .login_form-box input:focus + label,
+.sign-in_form .login_form-box input:not(:placeholder-shown) + label,
 .forgot-password_form .sign-in_form-box input:focus + label,
+.forgot-password_form .sign-in_form-box input:not(:placeholder-shown) + label,
 .forgot-password_form .forgot-password_form-box input:focus + label,
+.forgot-password_form .forgot-password_form-box input:not(:placeholder-shown) + label,
 .forgot-password_form .login_form-box input:focus + label,
+.forgot-password_form .login_form-box input:not(:placeholder-shown) + label,
 .login_form .sign-in_form-box input:focus + label,
+.login_form .sign-in_form-box input:not(:placeholder-shown) + label,
 .login_form .forgot-password_form-box input:focus + label,
-.login_form .login_form-box input:focus + label {
+.login_form .forgot-password_form-box input:not(:placeholder-shown) + label,
+.login_form .login_form-box input:focus + label,
+.login_form .login_form-box input:not(:placeholder-shown) + label {
   transform: translateY(-20px) scale(0.5);
 }
 
 .sign-in,
 .forgot-password,
 .login {
+  padding-bottom: 77px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -798,6 +969,46 @@
   gap: 9px;
   cursor: pointer;
   margin-top: 24px;
+}
+
+.show-password,
+.show-repassword, .show-repassword2 {
+  cursor: pointer;
+}
+.show-password .icon-show-password,
+.show-repassword .icon-show-password, .show-repassword2 .icon-show-password {
+  display: none;
+}
+
+.show-icon-pw .icon-show-password {
+  display: unset;
+}
+.show-icon-pw .icon-hiden-password {
+  display: none;
+}
+
+.form-description {
+  color: #606162;
+  font-size: 18px;
+  text-align: left;
+  padding: 18px 0;
+}
+
+.forgot-password_subtitle {
+  font-size: 24px;
+  padding-top: 26px;
+  padding-bottom: 16px;
+}
+
+.forgot-password_description {
+  text-align: center;
+  font-size: 15px;
+  color: #606162;
+  padding-bottom: 20px;
+}
+
+.forgot-password_prev span {
+  color: var(--color-primary);
 }
 
 .product-info {
@@ -1539,6 +1750,10 @@ li {
   font-size: 21px;
   display: block;
   text-align: center;
+}
+
+.d-flex {
+  display: flex;
 }
 
 .container {

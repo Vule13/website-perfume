@@ -1,0 +1,167 @@
+.account-left_avata {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.account-left_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .account-left__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+  }
+  .account-left__item-ac {
+    color: var(--color-primary);
+  }
+}
+
+.account-right {
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  justify-content: space-between;
+  border: 1px solid #BBB7B7;
+  gap: 58px;
+}
+
+.account-right_table {
+  width: 100%;
+  flex: 1;
+}
+
+.account-right_name {
+  
+  td {
+    border: unset;
+    width: unset;
+    padding: 15px 0 !important;
+    &:first-child {
+      padding-right: 30px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    &:focus {
+      outline: unset;
+    }
+  }
+  input[type="datetime"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    &:focus {
+      outline: unset;
+    }
+  }
+  input[type="radio"] {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.account-right_radio {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.account-right_input-radio {
+  display: flex;
+  gap: 126px;
+}
+
+.account-right_img-avata {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+  .account-right_img-button {
+    background-color: unset;
+    padding: 7px 26px;
+    border: 1px solid #606162;
+    cursor: pointer;
+  }
+}
+
+.heading-page {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 45px;
+}
+
+.account-order {
+    border: 1px solid #BBB7B7;
+    td, th {
+    border: unset;
+    width: unset;
+    padding: unset;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+  }
+  th {
+    border-bottom: 1px solid #BBB7B7;
+    
+  }
+}
+
+.account-left_avata {
+  font-size: 30px;
+}
+
+
+.account-right_check-password {
+
+  .login_form-box {
+    margin-top: 24px;
+    position: relative;
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      line-height: 1.2;
+      border: 1px solid #c4c4c4;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.2s;
+      transform-origin: 0 0;
+      color: #000;
+      font-size: 20px;
+      left: 15px;
+      &:focus {
+        transform: translateY(-20px) scale(0.5);
+      }
+      span {
+        color: var(--color-red);
+        cursor: pointer;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px;
+    }
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      transform: translateY(-20px) scale(0.5);
+    }
+  }
+}
