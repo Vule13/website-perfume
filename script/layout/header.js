@@ -9,19 +9,20 @@ const header = () => {
       <input
         class="header-search_input"
         type="text"
+        id="search"
         placeholder="Tìm kiếm sản phẩm"
       />
-      <button class="header-search_button">
+      <a href="./searchPage.html" class="header-search_button">
         <img
           class="header-search_icon"
           src="./assets/search.png"
           alt="search-icon"
         />
-      </button>
+      </a>
     </div>
     <div class="header-right" style="--col-xl: 2">
       <div class="header-card">
-        <img src="./assets/Giỏ hàng.png" alt="cart" />
+        <a href="./cart.html"><img src="./assets/Giỏ hàng.png" alt="cart" /></a>
       </div>
       <a href="account.html" class="header-account">
         <img id="avata" src="./assets/user.png" alt="account" />

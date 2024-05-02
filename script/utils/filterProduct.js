@@ -67,3 +67,19 @@ export function quickSort(arr, descending = false) {
     ...quickSort(right, descending),
   ];
 }
+
+export function searchFilter(productData, keyword, caseSensitive = false) {
+  const results = [];
+  const regex = new RegExp(keyword, caseSensitive ? "g" : "gi");
+
+  for (const product of productData) {
+    const { name, brand } = product;
+    const productString = `${name} ${brand}`;
+
+    if (productString.match(regex)) {
+      results.push(product);
+    }
+  }
+
+  return results;
+}

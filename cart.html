@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Giỏ hàng</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div class="container">
+          <h2 class="page-title">Trang chủ > <span>Giỏ hàng</span></h2>
+          <div class="cart-table">
+            <table>
+              <tr>
+                <th></th>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Thao tác</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <label class="check-box">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-mark">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M0 0V20H20V0H0ZM8.17308 15.0183L4.29808 10.712L5.44183 9.68269L8.13414 12.674L14.5192 5.07019L15.699 6.05769L8.17308 15.0183Z"
+                            fill="#176AB4"
+                          />
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cart_product-info">
+                    <div>
+                      <img
+                        src="./assets/Chanel Bleu De Chanel EDP.jpg"
+                        alt="product-img"
+                      />
+                    </div>
+                    <div class="cart_product-title">
+                      Chanel Bleu De Chanel EPD
+                    </div>
+                  </div>
+                </td>
+                <td>1450000đ</td>
+                <td>
+                  <div class="product-detail_quantity-button">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.3555 8.83301H0.783203C0.568359 8.83301 0.385254 8.75732 0.233887 8.60596C0.0825195 8.45459 0.00683594 8.27148 0.00683594 8.05664C0.00683594 7.85156 0.0825195 7.67334 0.233887 7.52197C0.385254 7.37061 0.568359 7.29492 0.783203 7.29492H12.3555C12.5703 7.29492 12.7534 7.37061 12.9048 7.52197C13.0562 7.67334 13.1318 7.85156 13.1318 8.05664C13.1318 8.27148 13.0562 8.45459 12.9048 8.60596C12.7534 8.75732 12.5703 8.83301 12.3555 8.83301Z"
+                          fill="#222222"
+                        />
+                      </svg>
+                    </span>
+                    <input type="number" min="1" value="1" />
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.3555 7.26562H7.3457V2.25586C7.3457 2.04102 7.2627 1.85791 7.09668 1.70654C6.93066 1.55518 6.74512 1.47949 6.54004 1.47949C6.3252 1.47949 6.13721 1.55518 5.97607 1.70654C5.81494 1.85791 5.73438 2.04102 5.73438 2.25586V7.26562H0.783203C0.568359 7.26562 0.385254 7.34619 0.233887 7.50732C0.0825195 7.66846 0.00683594 7.85156 0.00683594 8.05664C0.00683594 8.27148 0.0825195 8.45947 0.233887 8.62061C0.385254 8.78174 0.568359 8.8623 0.783203 8.8623H5.73438V13.8428C5.73438 14.0479 5.81494 14.2261 5.97607 14.3774C6.13721 14.5288 6.3252 14.6045 6.54004 14.6045C6.74512 14.6045 6.93066 14.5288 7.09668 14.3774C7.2627 14.2261 7.3457 14.0479 7.3457 13.8428V8.8623H12.3555C12.5703 8.8623 12.7534 8.78174 12.9048 8.62061C13.0562 8.45947 13.1318 8.27148 13.1318 8.05664C13.1318 7.85156 13.0562 7.66846 12.9048 7.50732C12.7534 7.34619 12.5703 7.26562 12.3555 7.26562Z"
+                          fill="#222222"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </td>
+                <td>1450000đ</td>
+                <td>
+                  <img src="./assets/delete.png" alt="del-btn" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <label class="check-box">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-mark">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M0 0V20H20V0H0ZM8.17308 15.0183L4.29808 10.712L5.44183 9.68269L8.13414 12.674L14.5192 5.07019L15.699 6.05769L8.17308 15.0183Z"
+                            fill="#176AB4"
+                          />
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cart_product-info">
+                    <div>
+                      <img
+                        src="./assets/dior sauvage edp.jpg"
+                        alt="product-img"
+                      />
+                    </div>
+                    <div class="cart_product-title">Dior Sauvage EDP</div>
+                  </div>
+                </td>
+                <td>2650000đ</td>
+                <td>
+                  <div class="product-detail_quantity-button">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.3555 8.83301H0.783203C0.568359 8.83301 0.385254 8.75732 0.233887 8.60596C0.0825195 8.45459 0.00683594 8.27148 0.00683594 8.05664C0.00683594 7.85156 0.0825195 7.67334 0.233887 7.52197C0.385254 7.37061 0.568359 7.29492 0.783203 7.29492H12.3555C12.5703 7.29492 12.7534 7.37061 12.9048 7.52197C13.0562 7.67334 13.1318 7.85156 13.1318 8.05664C13.1318 8.27148 13.0562 8.45459 12.9048 8.60596C12.7534 8.75732 12.5703 8.83301 12.3555 8.83301Z"
+                          fill="#222222"
+                        />
+                      </svg>
+                    </span>
+                    <input type="number" min="1" value="1" />
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.3555 7.26562H7.3457V2.25586C7.3457 2.04102 7.2627 1.85791 7.09668 1.70654C6.93066 1.55518 6.74512 1.47949 6.54004 1.47949C6.3252 1.47949 6.13721 1.55518 5.97607 1.70654C5.81494 1.85791 5.73438 2.04102 5.73438 2.25586V7.26562H0.783203C0.568359 7.26562 0.385254 7.34619 0.233887 7.50732C0.0825195 7.66846 0.00683594 7.85156 0.00683594 8.05664C0.00683594 8.27148 0.0825195 8.45947 0.233887 8.62061C0.385254 8.78174 0.568359 8.8623 0.783203 8.8623H5.73438V13.8428C5.73438 14.0479 5.81494 14.2261 5.97607 14.3774C6.13721 14.5288 6.3252 14.6045 6.54004 14.6045C6.74512 14.6045 6.93066 14.5288 7.09668 14.3774C7.2627 14.2261 7.3457 14.0479 7.3457 13.8428V8.8623H12.3555C12.5703 8.8623 12.7534 8.78174 12.9048 8.62061C13.0562 8.45947 13.1318 8.27148 13.1318 8.05664C13.1318 7.85156 13.0562 7.66846 12.9048 7.50732C12.7534 7.34619 12.5703 7.26562 12.3555 7.26562Z"
+                          fill="#222222"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </td>
+                <td>2650000đ</td>
+                <td>
+                  <img src="./assets/delete.png" alt="del-btn" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <label class="check-box">
+                      <input class="form-check-input" type="checkbox" />
+                      <span class="check-mark">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <path
+                            d="M0 0V20H20V0H0ZM8.17308 15.0183L4.29808 10.712L5.44183 9.68269L8.13414 12.674L14.5192 5.07019L15.699 6.05769L8.17308 15.0183Z"
+                            fill="#176AB4"
+                          />
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cart_product-info">
+                    <div>
+                      <img
+                        src="./assets/Yves Saint Laurent Y EDP.jpg"
+                        alt="product-img"
+                      />
+                    </div>
+                    <div class="cart_product-title">
+                      Chanel Bleu De Chanel EPD
+                    </div>
+                  </div>
+                </td>
+                <td>2500000đ</td>
+                <td>
+                  <div class="product-detail_quantity-button">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.3555 8.83301H0.783203C0.568359 8.83301 0.385254 8.75732 0.233887 8.60596C0.0825195 8.45459 0.00683594 8.27148 0.00683594 8.05664C0.00683594 7.85156 0.0825195 7.67334 0.233887 7.52197C0.385254 7.37061 0.568359 7.29492 0.783203 7.29492H12.3555C12.5703 7.29492 12.7534 7.37061 12.9048 7.52197C13.0562 7.67334 13.1318 7.85156 13.1318 8.05664C13.1318 8.27148 13.0562 8.45459 12.9048 8.60596C12.7534 8.75732 12.5703 8.83301 12.3555 8.83301Z"
+                          fill="#222222"
+                        />
+                      </svg>
+                    </span>
+                    <input type="number" min="1" value="1" />
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M12.3555 7.26562H7.3457V2.25586C7.3457 2.04102 7.2627 1.85791 7.09668 1.70654C6.93066 1.55518 6.74512 1.47949 6.54004 1.47949C6.3252 1.47949 6.13721 1.55518 5.97607 1.70654C5.81494 1.85791 5.73438 2.04102 5.73438 2.25586V7.26562H0.783203C0.568359 7.26562 0.385254 7.34619 0.233887 7.50732C0.0825195 7.66846 0.00683594 7.85156 0.00683594 8.05664C0.00683594 8.27148 0.0825195 8.45947 0.233887 8.62061C0.385254 8.78174 0.568359 8.8623 0.783203 8.8623H5.73438V13.8428C5.73438 14.0479 5.81494 14.2261 5.97607 14.3774C6.13721 14.5288 6.3252 14.6045 6.54004 14.6045C6.74512 14.6045 6.93066 14.5288 7.09668 14.3774C7.2627 14.2261 7.3457 14.0479 7.3457 13.8428V8.8623H12.3555C12.5703 8.8623 12.7534 8.78174 12.9048 8.62061C13.0562 8.45947 13.1318 8.27148 13.1318 8.05664C13.1318 7.85156 13.0562 7.66846 12.9048 7.50732C12.7534 7.34619 12.5703 7.26562 12.3555 7.26562Z"
+                          fill="#222222"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </td>
+                <td>2500000đ</td>
+                <td>
+                  <img src="./assets/delete.png" alt="del-btn" />
+                </td>
+              </tr>
+            </table>
+
+            <div class="cart_total">
+              <div class="cart_total-number">
+                <span>Tạm tính:</span>
+                <span>0đ</span>
+              </div>
+              <a href="./payment.html" class="cart_total-btn"
+                ><span>Thanh Toán</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./script/script.js" type="module"></script>
+  </body>
+</html>

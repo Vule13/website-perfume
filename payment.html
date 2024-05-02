@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div class="container">
+          <h2 class="page-title">Trang chủ > <span>Thanh toán</span></h2>
+
+          <div class="payment-page row">
+            <div class="col" style="--col-xl: 6">
+              <div class="payment">
+                <h3 class="payment-title">Thông tin mua hàng</h3>
+
+                <form class="payment-form">
+                  <div class="payment_input-item">
+                    <label for="">Họ tên <span>*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="payment_input-item">
+                    <label for="">Số điện thoại <span>*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="payment_input-item">
+                    <label for="">Tỉnh/thành phố <span>*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="payment_input-item">
+                    <label for="">Quận/Huyện <span>*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="payment_input-item">
+                    <label for="">Xã/Phường <span>*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="payment_input-item">
+                    <label for="">Địa chỉ cụ thể <span>*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="payment_input-item">
+                    <label for="">Ghi chú đơn hàng <span>*</span></label>
+                    <textarea></textarea>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col" style="--col-xl: 6">
+              <div class="order">
+                <h3 class="order-title">Đơn hàng</h3>
+                <div class="order-product">
+                  <div class="order-product_detail">
+                    <div class="order-product_img">
+                      <img
+                        src="./assets/Chanel Bleu De Chanel EDP.jpg"
+                        alt="product-img"
+                      />
+                    </div>
+                    <div class="order-product_name">Dior Sauvage EDP</div>
+                    <div class="order-product_quantity">1</div>
+                    <div class="order-product_price">1.450.000đ</div>
+                  </div>
+                  <div class="order-product_detail">
+                    <div class="order-product_img">
+                      <img
+                        src="./assets/Chanel Bleu De Chanel EDP.jpg"
+                        alt="product-img"
+                      />
+                    </div>
+                    <div class="order-product_name">
+                      Yves Saint Laurent Y EDP
+                    </div>
+                    <div class="order-product_quantity">1</div>
+                    <div class="order-product_price">1.450.000đ</div>
+                  </div>
+                </div>
+                <div class="order-discount">
+                  <div class="order-discount_title">
+                    Mã giảm giá <span>(nếu có)</span>:
+                  </div>
+                  <div class="order-discount_input">
+                    <input type="text" placeholder="Nhập mã giảm giá" />
+                  </div>
+                  <div class="order-discount_btn"><button>Áp dụng</button></div>
+                </div>
+                <div class="order-total">
+                  <div class="order-total_current">
+                    <span>Tạm tính:</span>
+                    <span>4.100.000đ</span>
+                  </div>
+                  <div class="order-total_shipping">
+                    <span>Phí vận chuyển:</span>
+                    <span>20.000đ</span>
+                  </div>
+                  <div class="order-total_discount">
+                    <span>Số tiền giảm:</span>
+                    <span>0đ</span>
+                  </div>
+                  <div class="order-total_price">
+                    <span>Tổng cộng</span>
+                    <span>4.080.000đ</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-method">
+                <h3 class="payment-method_title">Phương thức thanh toán</h3>
+                <form class="payment-method_form">
+                  <div class="payment-method_item">
+                    <input type="radio" name="payment" value="1" />
+                    <label>Thanh toán khi nhận hàng</label>
+                  </div>
+                  <div class="payment-method_item">
+                    <input type="radio" name="payment" value="2" />
+                    <label>Thanh toán qua ngân hàng</label>
+                  </div>
+                  <div class="payment-method_item">
+                    <input type="radio" name="payment" value="3" />
+                    <label>Thanh toán bằng ví điện tử</label>
+                  </div>
+                  <div class="payment-method_item">
+                    <input type="radio" name="payment" value="4" />
+                    <label>Thanh toán qua thẻ tín dụng, thẻ ghi nợ</label>
+                  </div>
+                </form>
+              </div>
+
+              <div class="payment-info">
+                <div class="payment-info_content">
+                  <div class="payment-info_detail">
+                    <h3 class="payment-info_title">Thông tin thanh toán</h3>
+                    <div class="payment-info_item">
+                      Tên chủ tài khoản: TRINH THI KHANH VAN
+                    </div>
+                    <div class="payment-info_item">
+                      Số tài khoản: 096 599 8668
+                    </div>
+                    <div class="payment-info_item">Ngân hàng: Vietcombank</div>
+                    <div class="payment-info_item">
+                      Nôi dung chuyển khoản: số điện thoại hoặc email
+                    </div>
+                  </div>
+                  <div class="payment_qr">
+                    <img src="./assets/image 19.png" alt="qr" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-ex">
+                <div class="payment-ex_title">
+                  Thông tin cá nhân của bạn sẽ được sử dụng để xử lý đơn đặt
+                  hàng của bạn trên trang web này.
+                </div>
+                <div class="payment-ex_policy">
+                  <input type="radio" />
+                  <label>
+                    Tôi đã đọc và đồng ý với điều khoản của website
+                    <a href="./policy.html"> điều khoản và điều kiện </a>*
+                  </label>
+                </div>
+                <div class="payment-btn">
+                  <button>Đặt hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./script/script.js" type="module"></script>
+  </body>
+</html>

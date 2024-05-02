@@ -1,9 +1,17 @@
 import { layout } from "./layout/layout.js";
 import { products } from "./components/products.js";
 import { sidebar } from "./components/sidebar.js";
-import { filterProducts, quickSort } from "./utils/filterProduct.js";
+import {
+  filterProducts,
+  quickSort,
+  searchFilter,
+} from "./utils/filterProduct.js";
 import { productData } from "./data/data.js";
 import { translatedValues } from "./utils/translateTitle.js";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "./utils/localStorage.js";
 
 const body = document.querySelector("main");
 const app = document.querySelector("#app");
@@ -85,8 +93,6 @@ checkboxes.forEach((checkbox) =>
 
     let translatedTitle = translatedValues(selectedValues);
 
-    console.log(translatedTitle);
-
     softTitle.innerHTML = `${translatedTitle.join(", ")}`;
 
     const softProduct = filterProducts(productData, selectedValues);
@@ -95,45 +101,71 @@ checkboxes.forEach((checkbox) =>
   })
 );
 
+// search product
+
+const searchValue = document.querySelector("#search");
+
+const button = document.querySelector(".header-search_button");
+const totalResults = document.querySelector(".search_total-result");
+const keyword = document.querySelector(".page-title >span");
+
+let searchKeyword = "";
+searchValue.addEventListener("change", (e) => {
+  searchKeyword = e.target.value;
+});
+
+button.addEventListener("click", () => {
+  if (searchKeyword) {
+    saveToLocalStorage("searchResult", searchKeyword);
+  }
+});
+
+if (isPage === "search-product") {
+  let searchKeyword = getFromLocalStorage("searchResult");
+  keyword.innerHTML = `Kết quả tìm kiếm cho "${searchKeyword}"`;
+
+  const searchArr = searchFilter(productData, searchKeyword);
+  renderProduct(products(isPage, searchArr), productContent);
+  if (searchArr)
+    totalResults.innerHTML = `Có ${searchArr.length} kết quả phù hợp`;
+}
 
 // show password
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  var showPasswordButton = document.querySelector('.show-password');
-  var showrePasswordButton = document.querySelector('.show-repassword');
-  var showrePasswordButton2 = document.querySelector('.show-repassword2');
+document.addEventListener("DOMContentLoaded", function () {
+  var showPasswordButton = document.querySelector(".show-password");
+  var showrePasswordButton = document.querySelector(".show-repassword");
+  var showrePasswordButton2 = document.querySelector(".show-repassword2");
   var passwordInput = document.getElementById("password");
   var repasswordInput = document.getElementById("re-password");
   var repasswordInput2 = document.getElementById("re-password2");
 
-  showPasswordButton.addEventListener('click', function() {
-      if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          showPasswordButton.classList.add('show-icon-pw');
-      } else {
-          passwordInput.type = "password";
-          showPasswordButton.classList.remove('show-icon-pw');
-      }
-  });
-  
-  showrePasswordButton.addEventListener('click', function() {
-    if (repasswordInput.type === "password") {
-        repasswordInput.type = "text";
-        showrePasswordButton.classList.add('show-icon-pw');
+  showPasswordButton?.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      showPasswordButton.classList.add("show-icon-pw");
     } else {
-        repasswordInput.type = "password";
-        showrePasswordButton.classList.remove('show-icon-pw');
+      passwordInput.type = "password";
+      showPasswordButton.classList.remove("show-icon-pw");
     }
   });
-  showrePasswordButton2.addEventListener('click', function() {
-    if (repasswordInput2.type === "password") {
-        repasswordInput2.type = "text";
-        showrePasswordButton2.classList.add('show-icon-pw');
+
+  showrePasswordButton?.addEventListener("click", function () {
+    if (repasswordInput.type === "password") {
+      repasswordInput.type = "text";
+      showrePasswordButton.classList.add("show-icon-pw");
     } else {
-        repasswordInput2.type = "password";
-        showrePasswordButton2.classList.remove('show-icon-pw');
+      repasswordInput.type = "password";
+      showrePasswordButton.classList.remove("show-icon-pw");
+    }
+  });
+  showrePasswordButton2?.addEventListener("click", function () {
+    if (repasswordInput2.type === "password") {
+      repasswordInput2.type = "text";
+      showrePasswordButton2.classList.add("show-icon-pw");
+    } else {
+      repasswordInput2.type = "password";
+      showrePasswordButton2.classList.remove("show-icon-pw");
     }
   });
 });
-
