@@ -1,0 +1,123 @@
+.admin-container {
+  display: flex;
+}
+
+.admin-left {
+  max-width: 342px;
+  width: 100%;
+  height: 1305px;
+  z-index: 10;
+  background-color: #fff;
+  .admin-left__logo {
+    padding-bottom: 23px;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+}
+
+.admin-left__menu {
+  .admin-left__menu-item {
+    padding: 8px 42px;
+    .admin-left__item-link {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      transition: all 0.3s ease;
+      svg {
+        width: 30px;
+        path {
+          transition: all 0.3s;
+        }
+      }
+    }
+    
+  }
+}
+
+.admin-left__item-link--ac {
+  background-color: var(--color-primary);
+  color: #fff;
+
+}
+
+.admin-right {
+  flex: 1;
+  background-color: #fafbfc;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .admin-right__header {
+    display: flex;
+    z-index: 10;
+    padding: 20px 44px 20px 30px;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;    
+    .admin-right__title {
+      font-size: 26px;
+    }
+    .admin-right__search {
+      max-width: 513px;
+      width: 100%;
+      display: flex;
+      input {
+        max-width: 298px;
+        width: 100%;
+        padding: 9px;
+        border: 1px solid var(--color-primary);
+        &:focus-visible {
+          outline: unset;
+        }
+      }
+      .admin-right__icon-search {
+        height: 36px;
+        width: 44px;
+        background-color: var(--color-primary);
+        position: relative;
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .admin-right__account {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      .admin-right__account-logo {
+        width: 60px;
+        height: 60px;
+      }
+      .admin-right__account-item {
+        display: flex;
+        gap: 20px;
+        .admin-right__position {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.4;
+        }
+        .admin-right__name {
+          font-size: 16px;
+        }
+      }
+      .admin-right__notifi {
+        position: relative;
+        span {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: var(--color-red);
+          top: -2px;
+          font-size: 9px;
+          right: 0;
+          color: #fff;
+          position: absolute;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
