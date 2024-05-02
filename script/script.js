@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var repasswordInput = document.getElementById("re-password");
   var repasswordInput2 = document.getElementById("re-password2");
 
-  showPasswordButton.addEventListener("click", function () {
+  showPasswordButton?.addEventListener("click", function () {
     if (passwordInput.type === "password") {
       passwordInput.type = "text";
       showPasswordButton.classList.add("show-icon-pw");
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  showrePasswordButton.addEventListener("click", function () {
+  showrePasswordButton?.addEventListener("click", function () {
     if (repasswordInput.type === "password") {
       repasswordInput.type = "text";
       showrePasswordButton.classList.add("show-icon-pw");
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
       showrePasswordButton.classList.remove("show-icon-pw");
     }
   });
-  showrePasswordButton2.addEventListener("click", function () {
+  showrePasswordButton2?.addEventListener("click", function () {
     if (repasswordInput2.type === "password") {
       repasswordInput2.type = "text";
       showrePasswordButton2.classList.add("show-icon-pw");

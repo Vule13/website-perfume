@@ -22,7 +22,7 @@ const header = () => {
     </div>
     <div class="header-right" style="--col-xl: 2">
       <div class="header-card">
-        <img src="./assets/Giỏ hàng.png" alt="cart" />
+        <a href="./cart.html"><img src="./assets/Giỏ hàng.png" alt="cart" /></a>
       </div>
       <a href="account.html" class="header-account">
         <img id="avata" src="./assets/user.png" alt="account" />
