@@ -73,8 +73,8 @@ export function searchFilter(productData, keyword, caseSensitive = false) {
   const regex = new RegExp(keyword, caseSensitive ? "g" : "gi");
 
   for (const product of productData) {
-    const { name, brand } = product;
-    const productString = `${name} ${brand}`;
+    const { name } = product;
+    const productString = `${name}`;
 
     if (productString.match(regex)) {
       results.push(product);

@@ -3,10 +3,10 @@ import { formatNumber } from "../utils/formatNumber.js";
 const productItem = (data, col) => {
   return `
   <div class="col" style="--col-xl: ${col};">
-    <a href="./product-detail.html" class="product-item" >
-      <div class="product-item_img">
+    <div  class="product-item" >
+      <a href="./product-detail.html" class="product-item_img">
         <img src="${data.image}" alt="${data.name}" />
-      </div>
+      </a>
       <div class="product-item_content">
         <h3 class="product-item_title">${data.name}</h3>
         <div class="product-item_price">${formatNumber(data.price)}đ</div>
@@ -19,7 +19,6 @@ const productItem = (data, col) => {
               <path d="M60.2001 0L62.1309 6.21885H68.3792L63.3242 10.0623L65.2551 16.2812L60.2001 12.4377L55.1451 16.2812L57.076 10.0623L52.021 6.21885H58.2693L60.2001 0Z" fill="#EC3237"/>
               <path d="M77.4 0L79.3309 6.21885H85.5791L80.5242 10.0623L82.455 16.2812L77.4 12.4377L72.3451 16.2812L74.2759 10.0623L69.221 6.21885H75.4692L77.4 0Z" fill="#EC3237"/>
             </svg>
-          
           </span>
           <span class="product-item_card">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -28,7 +27,7 @@ const productItem = (data, col) => {
           </span>
         </div>
       </div>
-    </a>
+    </div>
   </div>
     `;
 };

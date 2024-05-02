@@ -55,7 +55,7 @@
 
 //
 .popup {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   display: flex;
@@ -127,8 +127,44 @@
 
 .popup-content2 {
   padding: 16px 14px 16px 13px;
-  top: 14%;
   text-align: center;
   width: 367px;
   height: 124px;
+}
+
+.popup-content_login {
+  background-color: #fff;
+  padding: 19px 39px 31px;
+
+  .popup-title {
+    margin-bottom: 20px;
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .popup-btn {
+    gap: 36px;
+    button {
+      color: #176ab4;
+      text-align: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      padding: 7px 25px;
+      width: 100px;
+      height: 32px;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    background: #176ab4;
+    padding: 7px 14px;
+    height: 32px;
+  }
 }

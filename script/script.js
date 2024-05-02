@@ -173,30 +173,13 @@ document.addEventListener("DOMContentLoaded", function () {
 //
 
 const quantityValue = document.querySelector("#quantity");
-const quantityValue1 = document.querySelector("#quantity1");
-const quantityValue2 = document.querySelector("#quantity2");
-const quantityValue3 = document.querySelector("#quantity3");
 const plus = document.querySelector("#plus");
-const plus1 = document.querySelector("#plus1");
-const plus2 = document.querySelector("#plus2");
-const plus3 = document.querySelector("#plus3");
-
 const minus = document.querySelector("#minus");
-const minus1 = document.querySelector("#minus1");
-const minus2 = document.querySelector("#minus2");
-const minus3 = document.querySelector("#minus3");
+const decrementBtns = document.querySelectorAll('[id^="minus"]');
+const incrementBtns = document.querySelectorAll('[id^="plus"]');
 
 plus?.addEventListener("click", () => {
   quantityValue.value++;
-});
-plus1?.addEventListener("click", () => {
-  quantityValue1.value++;
-});
-plus2?.addEventListener("click", () => {
-  quantityValue2.value++;
-});
-plus3?.addEventListener("click", () => {
-  quantityValue3.value++;
 });
 
 minus?.addEventListener("click", () => {
@@ -205,21 +188,12 @@ minus?.addEventListener("click", () => {
   }
 });
 
-minus1?.addEventListener("click", () => {
-  if (quantityValue1.value > 1) {
-    quantityValue1.value--;
-  }
-});
-minus2?.addEventListener("click", () => {
-  if (quantityValue2.value > 1) {
-    quantityValue2.value--;
-  }
+decrementBtns.forEach((btn) => {
+  btn.addEventListener("click", updateQuantity);
 });
 
-minus3?.addEventListener("click", () => {
-  if (quantityValue3.value > 1) {
-    quantityValue3.value--;
-  }
+incrementBtns.forEach((btn) => {
+  btn.addEventListener("click", updateQuantity);
 });
 
 const paymentMethods = document.querySelectorAll(
@@ -244,6 +218,7 @@ const popup = document.querySelector("#popup");
 const cancel = document.querySelector("#cancel");
 const deleteProduct = document.querySelector("#delete");
 const addToCard = document.querySelector(".btn-addtocard");
+const productItems = document.querySelectorAll(".product-item_card");
 
 let currentRow;
 deleteProduct?.addEventListener("click", () => {
@@ -265,10 +240,115 @@ deleteButtons.forEach((button) => {
   });
 });
 
+productItems.forEach((product) => {
+  product.addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
+});
+
 cancel?.addEventListener("click", () => {
   popup.style.display = "none";
 });
 
 addToCard?.addEventListener("click", () => {
   popup.style.display = "flex";
+});
+
+//
+
+const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+checkBoxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", updateTotal);
+});
+
+function updateTotal() {
+  let total = 0;
+  const rows = document.querySelectorAll("table tr");
+
+  rows.forEach((row) => {
+    const checkbox = row.querySelector('input[type="checkbox"]');
+    const priceCell = row.querySelector("td:nth-child(3)");
+
+    if (checkbox && checkbox.checked && priceCell) {
+      const price = parseFloat(
+        priceCell.textContent.replace("đ", "").replace(/,/g, "")
+      );
+      total += price;
+    }
+  });
+
+  const totalElement = document.querySelector(
+    ".cart_total-number span:last-child"
+  );
+  if (totalElement) {
+    totalElement.textContent = total.toLocaleString("vi-VN") + "đ";
+  }
+}
+
+function updateQuantity(event) {
+  const btn = event.target;
+  const row = btn.closest("tr");
+  const quantityInput = row.querySelector('input[type="number"]');
+  const priceCell = row.querySelector("td:nth-child(3)");
+  const totalCell = row.querySelector("td:nth-child(5)");
+
+  if (quantityInput && priceCell && totalCell) {
+    let quantity = parseInt(quantityInput.value);
+    const price = parseFloat(
+      priceCell.textContent.replace("đ", "").replace(/,/g, "")
+    );
+
+    if (btn.id.startsWith("minus")) {
+      if (quantity > 1) {
+        quantity--;
+      }
+    } else if (btn.id.startsWith("plus")) {
+      quantity++;
+    }
+
+    quantityInput.value = quantity;
+    const total = price * quantity;
+    totalCell.textContent = total.toLocaleString("vi-VN") + "đ";
+
+    updateTotal();
+  }
+}
+updateTotal();
+
+// login
+let isLogin = getFromLocalStorage("isLogin") || false;
+const loginBtn = document.querySelector("#login-action");
+const loginAvt = document.querySelector(".header-account");
+const logoutBtn = document.querySelector("#logout");
+
+loginBtn?.addEventListener("click", () => {
+  saveToLocalStorage("isLogin", true);
+});
+
+if (isLogin) {
+  loginAvt.innerHTML =
+    "<img class='avt-login' src='./assets/avatar user.jpg' alt='avt'/>";
+} else {
+  loginAvt.innerHTML =
+    "<img id='avatar' src='./assets/user.png' alt='account' />";
+}
+
+logoutBtn?.addEventListener("click", () => {
+  localStorage.removeItem("isLogin");
+  window.location.replace("./index.html");
+});
+
+// cart_total-btn
+const cartTotal = document.querySelector(".cart_total-btn");
+const popupContent = document.querySelector(".popup-content");
+const popupContentLogin = document.querySelector(".popup-content_login");
+
+cartTotal?.addEventListener("click", () => {
+  if (isLogin) {
+    window.location.replace("./payment.html");
+  }
+
+  popup.style.display = "flex";
+  popupContent.style.display = "none";
+  popupContentLogin.style.display = "block";
 });
