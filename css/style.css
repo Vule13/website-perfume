@@ -159,7 +159,7 @@
 
 .product-filter_select {
   padding: 8px 0 8.8px 11.3px;
-  height: 32px;
+  height: 35px;
   width: 192px;
   color: #000;
   font-size: 16px;
@@ -172,7 +172,7 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("../../assets/back.png");
+  background-image: url("../assets/back.png");
   background-repeat: no-repeat;
   background-position: right 17.73px center;
   padding-right: 17px;
@@ -379,7 +379,6 @@
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -606,6 +605,10 @@
   gap: 12px;
   font-size: 22px;
 }
+.account-left_menu .account-left__item img {
+  width: 30px;
+  height: 30px;
+}
 .account-left_menu .account-left__item-ac {
   color: var(--color-primary);
 }
@@ -624,6 +627,9 @@
   flex: 1;
 }
 
+.account-right_name {
+  width: 100%;
+}
 .account-right_name td {
   border: unset;
   width: unset;
@@ -742,6 +748,9 @@
   top: 50%;
   transform: translateY(-50%);
   right: 15px;
+}
+.account-right_check-password .login_form-box input:not(:-moz-placeholder-shown) + label {
+  transform: translateY(-20px) scale(0.5);
 }
 .account-right_check-password .login_form-box input:focus + label,
 .account-right_check-password .login_form-box input:not(:placeholder-shown) + label {
@@ -1346,6 +1355,9 @@
   top: 50%;
   transform: translateY(-50%);
   right: 15px;
+}
+.sign-in_form .sign-in_form-box input:not(:-moz-placeholder-shown) + label, .sign-in_form .forgot-password_form-box input:not(:-moz-placeholder-shown) + label, .sign-in_form .login_form-box input:not(:-moz-placeholder-shown) + label, .forgot-password_form .sign-in_form-box input:not(:-moz-placeholder-shown) + label, .forgot-password_form .forgot-password_form-box input:not(:-moz-placeholder-shown) + label, .forgot-password_form .login_form-box input:not(:-moz-placeholder-shown) + label, .login_form .sign-in_form-box input:not(:-moz-placeholder-shown) + label, .login_form .forgot-password_form-box input:not(:-moz-placeholder-shown) + label, .login_form .login_form-box input:not(:-moz-placeholder-shown) + label {
+  transform: translateY(-20px) scale(0.5);
 }
 .sign-in_form .sign-in_form-box input:focus + label,
 .sign-in_form .sign-in_form-box input:not(:placeholder-shown) + label,
@@ -8058,7 +8070,7 @@
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 206px;
+  top: 240px;
   left: 385px;
   overflow: hidden;
 }
@@ -9684,7 +9696,7 @@
 }
 
 .v240_17680 {
-  width: 103px;
+  width: 107px;
   color: rgb(187, 183, 183);
   position: absolute;
   top: 1px;
@@ -9958,7 +9970,7 @@
 }
 
 .v226_17247 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17247.png");
   background-repeat: no-repeat;
@@ -9972,7 +9984,7 @@
 }
 
 .v226_17248 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -10074,7 +10086,7 @@
 }
 
 .v226_17256 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17256.png");
   background-repeat: no-repeat;
@@ -10088,7 +10100,7 @@
 }
 
 .v226_17257 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -10190,7 +10202,7 @@
 }
 
 .v226_17265 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17265.png");
   background-repeat: no-repeat;
@@ -10204,7 +10216,7 @@
 }
 
 .v226_17266 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -10306,7 +10318,7 @@
 }
 
 .v226_17274 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17274.png");
   background-repeat: no-repeat;
@@ -10320,7 +10332,7 @@
 }
 
 .v226_17275 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -10396,7 +10408,7 @@
 }
 
 .v226_17281 {
-  width: 110px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 17px;
@@ -10422,7 +10434,7 @@
 }
 
 .v226_17283 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17283.png");
   background-repeat: no-repeat;
@@ -10436,7 +10448,7 @@
 }
 
 .v226_17284 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -10538,7 +10550,7 @@
 }
 
 .v226_17292 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17292.png");
   background-repeat: no-repeat;
@@ -10552,7 +10564,7 @@
 }
 
 .v226_17293 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -10770,7 +10782,7 @@
 }
 
 .v226_17310 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17310.png");
   background-repeat: no-repeat;
@@ -10784,7 +10796,7 @@
 }
 
 .v226_17311 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -10886,7 +10898,7 @@
 }
 
 .v226_17319 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17319.png");
   background-repeat: no-repeat;
@@ -10900,7 +10912,7 @@
 }
 
 .v226_17320 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -11002,7 +11014,7 @@
 }
 
 .v226_17328 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17328.png");
   background-repeat: no-repeat;
@@ -11016,7 +11028,7 @@
 }
 
 .v226_17329 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -11118,7 +11130,7 @@
 }
 
 .v226_17337 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17337.png");
   background-repeat: no-repeat;
@@ -11132,7 +11144,7 @@
 }
 
 .v226_17338 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -11234,7 +11246,7 @@
 }
 
 .v226_17346 {
-  width: 121px;
+  width: 158px;
   height: 21px;
   background: url("../images/v226_17346.png");
   background-repeat: no-repeat;
@@ -11248,7 +11260,7 @@
 }
 
 .v226_17347 {
-  width: 99px;
+  width: 130px;
   color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
@@ -11663,6 +11675,21 @@
   color: #fff;
 }
 
+.v240_17679554 {
+  width: 974px;
+  height: 24px;
+  background: url(../images/v240_17679.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  left: 385px;
+  overflow: hidden;
+  top: 136px;
+  z-index: 100000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11806,6 +11833,4 @@ li {
 .product-layout {
   display: grid;
   grid-template-columns: 3fr 9fr;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

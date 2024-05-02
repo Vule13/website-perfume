@@ -14,6 +14,10 @@
     align-items: center;
     gap: 12px;
     font-size: 22px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
   .account-left__item-ac {
     color: var(--color-primary);
@@ -35,7 +39,7 @@
 }
 
 .account-right_name {
-  
+  width: 100%;
   td {
     border: unset;
     width: unset;
