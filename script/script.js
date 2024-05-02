@@ -169,3 +169,106 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+//
+
+const quantityValue = document.querySelector("#quantity");
+const quantityValue1 = document.querySelector("#quantity1");
+const quantityValue2 = document.querySelector("#quantity2");
+const quantityValue3 = document.querySelector("#quantity3");
+const plus = document.querySelector("#plus");
+const plus1 = document.querySelector("#plus1");
+const plus2 = document.querySelector("#plus2");
+const plus3 = document.querySelector("#plus3");
+
+const minus = document.querySelector("#minus");
+const minus1 = document.querySelector("#minus1");
+const minus2 = document.querySelector("#minus2");
+const minus3 = document.querySelector("#minus3");
+
+plus?.addEventListener("click", () => {
+  quantityValue.value++;
+});
+plus1?.addEventListener("click", () => {
+  quantityValue1.value++;
+});
+plus2?.addEventListener("click", () => {
+  quantityValue2.value++;
+});
+plus3?.addEventListener("click", () => {
+  quantityValue3.value++;
+});
+
+minus?.addEventListener("click", () => {
+  if (quantityValue.value > 1) {
+    quantityValue.value--;
+  }
+});
+
+minus1?.addEventListener("click", () => {
+  if (quantityValue1.value > 1) {
+    quantityValue1.value--;
+  }
+});
+minus2?.addEventListener("click", () => {
+  if (quantityValue2.value > 1) {
+    quantityValue2.value--;
+  }
+});
+
+minus3?.addEventListener("click", () => {
+  if (quantityValue3.value > 1) {
+    quantityValue3.value--;
+  }
+});
+
+const paymentMethods = document.querySelectorAll(
+  ".payment-method_item > input"
+);
+const paymentInfo = document.querySelector(".payment-info");
+
+paymentMethods?.forEach((paymentMethod) => {
+  paymentMethod.addEventListener("change", () => {
+    if (paymentMethod.value == 2) {
+      paymentInfo.style.display = "block";
+    } else {
+      paymentInfo.style.display = "none";
+    }
+  });
+});
+
+// popup
+
+const deleteButtons = document.querySelectorAll("#del");
+const popup = document.querySelector("#popup");
+const cancel = document.querySelector("#cancel");
+const deleteProduct = document.querySelector("#delete");
+const addToCard = document.querySelector(".btn-addtocard");
+
+let currentRow;
+deleteProduct?.addEventListener("click", () => {
+  currentRow.remove();
+
+  popup.style.display = "none";
+});
+
+popup?.addEventListener("click", (event) => {
+  if (!event.target.closest(".popup-content")) {
+    popup.style.display = "none";
+  }
+});
+
+deleteButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    currentRow = button.closest("tr");
+    popup.style.display = "flex";
+  });
+});
+
+cancel?.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+addToCard?.addEventListener("click", () => {
+  popup.style.display = "flex";
+});

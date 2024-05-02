@@ -13,6 +13,28 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="popup" class="popup">
+      <div class="popup-content popup-content2">
+        <div class="popup-content_icon2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            fill="none"
+          >
+            <path
+              d="M54 30C54 43.2548 43.2548 54 30 54C16.7452 54 6 43.2548 6 30C6 16.7452 16.7452 6 30 6C33.7655 6 37.3284 6.86717 40.5 8.4127M49.5 15L28.5 36L22.5 30"
+              stroke="#176AB4"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="popup-content_title2">Sản phẩm được thêm vào giỏ hàng</div>
+      </div>
+    </div>
     <div id="app">
       <main>
         <div class="container">
@@ -117,7 +139,7 @@
                 <div class="product-detail_quantity">
                   <div class="product-detail_quantity-title">Số lượng</div>
                   <div class="product-detail_quantity-button">
-                    <span>
+                    <span id="minus">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -131,8 +153,8 @@
                         />
                       </svg>
                     </span>
-                    <input type="number" min="1" value="1" />
-                    <span>
+                    <input id="quantity" type="number" min="1" value="1" />
+                    <span id="plus">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -153,7 +175,7 @@
                 </div>
                 <div class="product-btn">
                   <button class="btn-addtocard">Thêm vào giỏ</button>
-                  <button class="btn-buynow">Mua ngay</button>
+                  <a href="./cart.html" class="btn-buynow">Mua ngay</a>
                 </div>
               </div>
             </div>

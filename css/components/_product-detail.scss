@@ -241,6 +241,13 @@
   padding-right: 11px;
   display: flex;
 
+  span {
+    display: flex;
+    align-self: center;
+    height: 30px;
+    cursor: pointer;
+  }
+
   span:first-child {
     border: 1px solid #e1e1e2;
     opacity: 0.8;
@@ -251,11 +258,10 @@
   input {
     border: 1px solid #e1e1e2;
     opacity: 0.8;
-    padding: 4.6px 19.7px;
     width: 50px;
     height: 30px;
     outline: none;
-    height: 32.82px;
+    text-align: center;
   }
 
   input::-webkit-outer-spin-button,
@@ -288,6 +294,10 @@
 .product-btn {
   display: flex;
   gap: 24px;
+
+  button {
+    cursor: pointer;
+  }
 }
 
 .btn-addtocard {

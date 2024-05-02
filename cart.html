@@ -13,6 +13,15 @@
     <title>Giỏ hàng</title>
   </head>
   <body>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3 class="popup-title">Bạn chắc chắn muốn xoá không ?</h3>
+        <div class="popup-btn">
+          <button id="cancel">Huỷ bỏ</button>
+          <button id="delete">Xoá</button>
+        </div>
+      </div>
+    </div>
     <div id="app">
       <main>
         <div class="container">
@@ -65,7 +74,7 @@
                 <td>1450000đ</td>
                 <td>
                   <div class="product-detail_quantity-button">
-                    <span>
+                    <span id="minus1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -79,8 +88,8 @@
                         />
                       </svg>
                     </span>
-                    <input type="number" min="1" value="1" />
-                    <span>
+                    <input id="quantity1" type="number" min="1" value="1" />
+                    <span id="plus1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -97,7 +106,7 @@
                   </div>
                 </td>
                 <td>1450000đ</td>
-                <td>
+                <td id="del">
                   <img src="./assets/delete.png" alt="del-btn" />
                 </td>
               </tr>
@@ -137,7 +146,7 @@
                 <td>2650000đ</td>
                 <td>
                   <div class="product-detail_quantity-button">
-                    <span>
+                    <span id="minus2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -151,8 +160,8 @@
                         />
                       </svg>
                     </span>
-                    <input type="number" min="1" value="1" />
-                    <span>
+                    <input id="quantity2" type="number" min="1" value="1" />
+                    <span id="plus2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -169,7 +178,7 @@
                   </div>
                 </td>
                 <td>2650000đ</td>
-                <td>
+                <td id="del">
                   <img src="./assets/delete.png" alt="del-btn" />
                 </td>
               </tr>
@@ -211,7 +220,7 @@
                 <td>2500000đ</td>
                 <td>
                   <div class="product-detail_quantity-button">
-                    <span>
+                    <span id="minus3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -225,8 +234,8 @@
                         />
                       </svg>
                     </span>
-                    <input type="number" min="1" value="1" />
-                    <span>
+                    <input id="quantity3" type="number" min="1" value="1" />
+                    <span id="plus3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="15"
@@ -243,7 +252,7 @@
                   </div>
                 </td>
                 <td>2500000đ</td>
-                <td>
+                <td id="del">
                   <img src="./assets/delete.png" alt="del-btn" />
                 </td>
               </tr>

@@ -615,7 +615,7 @@
   align-items: center;
   padding: 32px;
   justify-content: space-between;
-  border: 1px solid #BBB7B7;
+  border: 1px solid #bbb7b7;
   gap: 58px;
 }
 
@@ -688,9 +688,10 @@
 }
 
 .account-order {
-  border: 1px solid #BBB7B7;
+  border: 1px solid #bbb7b7;
 }
-.account-order td, .account-order th {
+.account-order td,
+.account-order th {
   border: unset;
   width: unset;
   padding: unset;
@@ -699,7 +700,7 @@
   color: #000;
 }
 .account-order th {
-  border-bottom: 1px solid #BBB7B7;
+  border-bottom: 1px solid #bbb7b7;
 }
 
 .account-left_avata {
@@ -785,6 +786,7 @@
 }
 .cart-table td:last-child {
   padding-left: 24px;
+  cursor: pointer;
 }
 .cart-table td:last-child img {
   width: 28px;
@@ -889,6 +891,7 @@
 .payment-ex_policy input {
   width: 13px;
   height: 13px;
+  outline: none;
 }
 .payment-ex_policy label {
   color: #000;
@@ -913,6 +916,7 @@
   margin-right: 21px;
 }
 .payment-btn button {
+  cursor: pointer;
   padding: 14px 41px 13px 40px;
   color: #fff;
   text-align: center;
@@ -1185,6 +1189,7 @@
 .payment-method_item input {
   height: 21px;
   width: 21px;
+  outline: none;
 }
 .payment-method_item label {
   color: #000;
@@ -1210,6 +1215,7 @@
   border: 1px solid #bbb7b7;
   background: #fff;
   margin-top: 39px;
+  display: none;
 }
 
 .payment-info_detail {
@@ -1238,6 +1244,79 @@
 .payment_qr img {
   height: 96px;
   width: 96px;
+}
+
+.order-success {
+  text-align: center;
+  padding-top: 2px;
+}
+
+.order-success_title {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+}
+
+.order-success_thanks {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 24px;
+}
+
+.order-success_thanks-detail {
+  margin-top: 18px;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+}
+.order-success_thanks-detail p {
+  width: 624px;
+}
+
+.order-success_btn {
+  margin-top: 34px;
+  margin-bottom: 76px;
+  display: flex;
+  gap: 240px;
+  justify-content: center;
+}
+.order-success_btn a:first-child {
+  border: 1px solid #176ab4;
+  color: #176ab4;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #fff;
+  padding: 12px 14px 11px;
+  width: 192px;
+}
+.order-success_btn a:last-child {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #176ab4;
+  padding: 12px 14px 11px;
+  border: none;
+  width: 192px;
 }
 
 .sign-in_title,
@@ -1731,6 +1810,12 @@
   display: flex;
   /* Firefox */
 }
+.product-detail_quantity-button span {
+  display: flex;
+  align-self: center;
+  height: 30px;
+  cursor: pointer;
+}
 .product-detail_quantity-button span:first-child {
   border: 1px solid #e1e1e2;
   opacity: 0.8;
@@ -1740,11 +1825,10 @@
 .product-detail_quantity-button input {
   border: 1px solid #e1e1e2;
   opacity: 0.8;
-  padding: 4.6px 19.7px;
   width: 50px;
   height: 30px;
   outline: none;
-  height: 32.82px;
+  text-align: center;
 }
 .product-detail_quantity-button input::-webkit-outer-spin-button,
 .product-detail_quantity-button input::-webkit-inner-spin-button {
@@ -1772,6 +1856,9 @@
 .product-btn {
   display: flex;
   gap: 24px;
+}
+.product-btn button {
+  cursor: pointer;
 }
 
 .btn-addtocard {
@@ -2202,6 +2289,7 @@ body {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
+  position: relative;
 }
 
 .wrapper {
@@ -2316,6 +2404,83 @@ li {
 .product-layout {
   display: grid;
   grid-template-columns: 3fr 9fr;
+}
+
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.popup-content {
+  position: absolute;
+  top: 30%;
+  background-color: #fff;
+  padding: 29px 37px;
+}
+
+.popup-title {
+  color: #176ab4;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  margin-bottom: 31px;
+}
+
+.popup-btn {
+  width: 239px;
+  display: flex;
+  gap: 36px;
+}
+.popup-btn button {
+  cursor: pointer;
+}
+.popup-btn button:first-child {
+  border: 1px solid #176ab4;
+  background: #fff;
+  color: #176ab4;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 7px 27px 7px 26px;
+}
+.popup-btn button:last-child {
+  padding: 7px 37px;
+  background: #176ab4;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+}
+
+.popup-content_title2 {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.popup-content2 {
+  padding: 16px 14px 16px 13px;
+  top: 14%;
+  text-align: center;
+  width: 367px;
+  height: 124px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -37,6 +37,7 @@
     }
     &:last-child {
       padding-left: 24px;
+      cursor: pointer;
       img {
         width: 28px;
         height: 31px;
@@ -147,6 +148,7 @@
   input {
     width: 13px;
     height: 13px;
+    outline: none;
   }
 
   label {
@@ -174,6 +176,7 @@
   margin-right: 21px;
 
   button {
+    cursor: pointer;
     padding: 14px 41px 13px 40px;
     color: #fff;
     text-align: center;
