@@ -285,6 +285,7 @@
   input {
     height: 21px;
     width: 21px;
+    outline: none;
   }
 
   label {
@@ -314,6 +315,7 @@
   border: 1px solid #bbb7b7;
   background: #fff;
   margin-top: 39px;
+  display: none;
 }
 
 .payment-info_detail {

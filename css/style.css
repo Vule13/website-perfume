@@ -127,6 +127,12 @@
   line-height: 22px;
 }
 
+.avt-login {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
 .product-filter {
   display: flex;
   justify-content: space-between;
@@ -618,7 +624,7 @@
   align-items: center;
   padding: 32px;
   justify-content: space-between;
-  border: 1px solid #BBB7B7;
+  border: 1px solid #bbb7b7;
   gap: 58px;
 }
 
@@ -694,9 +700,10 @@
 }
 
 .account-order {
-  border: 1px solid #BBB7B7;
+  border: 1px solid #bbb7b7;
 }
-.account-order td, .account-order th {
+.account-order td,
+.account-order th {
   border: unset;
   width: unset;
   padding: unset;
@@ -705,7 +712,7 @@
   color: #000;
 }
 .account-order th {
-  border-bottom: 1px solid #BBB7B7;
+  border-bottom: 1px solid #bbb7b7;
 }
 
 .account-left_avata {
@@ -794,6 +801,7 @@
 }
 .cart-table td:last-child {
   padding-left: 24px;
+  cursor: pointer;
 }
 .cart-table td:last-child img {
   width: 28px;
@@ -872,6 +880,7 @@
   font-style: normal;
   font-weight: 600;
   border: none;
+  cursor: pointer;
 }
 
 .payment-ex {
@@ -898,6 +907,7 @@
 .payment-ex_policy input {
   width: 13px;
   height: 13px;
+  outline: none;
 }
 .payment-ex_policy label {
   color: #000;
@@ -922,6 +932,7 @@
   margin-right: 21px;
 }
 .payment-btn button {
+  cursor: pointer;
   padding: 14px 41px 13px 40px;
   color: #fff;
   text-align: center;
@@ -1194,6 +1205,7 @@
 .payment-method_item input {
   height: 21px;
   width: 21px;
+  outline: none;
 }
 .payment-method_item label {
   color: #000;
@@ -1219,6 +1231,7 @@
   border: 1px solid #bbb7b7;
   background: #fff;
   margin-top: 39px;
+  display: none;
 }
 
 .payment-info_detail {
@@ -1247,6 +1260,79 @@
 .payment_qr img {
   height: 96px;
   width: 96px;
+}
+
+.order-success {
+  text-align: center;
+  padding-top: 2px;
+}
+
+.order-success_title {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+}
+
+.order-success_thanks {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 24px;
+}
+
+.order-success_thanks-detail {
+  margin-top: 18px;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+}
+.order-success_thanks-detail p {
+  width: 624px;
+}
+
+.order-success_btn {
+  margin-top: 34px;
+  margin-bottom: 76px;
+  display: flex;
+  gap: 240px;
+  justify-content: center;
+}
+.order-success_btn a:first-child {
+  border: 1px solid #176ab4;
+  color: #176ab4;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #fff;
+  padding: 12px 14px 11px;
+  width: 192px;
+}
+.order-success_btn a:last-child {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #176ab4;
+  padding: 12px 14px 11px;
+  border: none;
+  width: 192px;
 }
 
 .sign-in_title,
@@ -1743,6 +1829,12 @@
   display: flex;
   /* Firefox */
 }
+.product-detail_quantity-button span {
+  display: flex;
+  align-self: center;
+  height: 30px;
+  cursor: pointer;
+}
 .product-detail_quantity-button span:first-child {
   border: 1px solid #e1e1e2;
   opacity: 0.8;
@@ -1752,11 +1844,10 @@
 .product-detail_quantity-button input {
   border: 1px solid #e1e1e2;
   opacity: 0.8;
-  padding: 4.6px 19.7px;
   width: 50px;
   height: 30px;
   outline: none;
-  height: 32.82px;
+  text-align: center;
 }
 .product-detail_quantity-button input::-webkit-outer-spin-button,
 .product-detail_quantity-button input::-webkit-inner-spin-button {
@@ -1784,6 +1875,9 @@
 .product-btn {
   display: flex;
   gap: 24px;
+}
+.product-btn button {
+  cursor: pointer;
 }
 
 .btn-addtocard {
@@ -11719,6 +11813,7 @@ body {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
+  position: relative;
 }
 
 .wrapper {

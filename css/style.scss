@@ -14,6 +14,7 @@
 @import "./components/tab";
 @import "./components/cart";
 @import "./components/payment";
+@import "./components/orderSuccess";
 
 @import "./components/sign-in";
 // Page
@@ -50,4 +51,120 @@
 .product-layout {
   display: grid;
   grid-template-columns: 3fr 9fr;
+}
+
+//
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.popup-content {
+  position: absolute;
+  top: 30%;
+  background-color: #fff;
+  padding: 29px 37px;
+}
+
+.popup-title {
+  color: #176ab4;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  margin-bottom: 31px;
+}
+
+.popup-btn {
+  width: 239px;
+  display: flex;
+  gap: 36px;
+
+  button {
+    cursor: pointer;
+    &:first-child {
+      border: 1px solid #176ab4;
+      background: #fff;
+      color: #176ab4;
+      text-align: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 7px 27px 7px 26px;
+    }
+
+    &:last-child {
+      padding: 7px 37px;
+      background: #176ab4;
+      color: #fff;
+      text-align: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      border: none;
+    }
+  }
+}
+
+.popup-content_title2 {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+.popup-content2 {
+  padding: 16px 14px 16px 13px;
+  text-align: center;
+  width: 367px;
+  height: 124px;
+}
+
+.popup-content_login {
+  background-color: #fff;
+  padding: 19px 39px 31px;
+
+  .popup-title {
+    margin-bottom: 20px;
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .popup-btn {
+    gap: 36px;
+    button {
+      color: #176ab4;
+      text-align: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      padding: 7px 25px;
+      width: 100px;
+      height: 32px;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    background: #176ab4;
+    padding: 7px 14px;
+    height: 32px;
+  }
 }

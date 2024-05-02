@@ -1,0 +1,80 @@
+.order-success {
+  text-align: center;
+  padding-top: 2px;
+}
+
+.order-success_title {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+}
+
+.order-success_icon {
+}
+
+.order-success_thanks {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 24px;
+}
+
+.order-success_thanks-detail {
+  margin-top: 18px;
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+
+  p {
+    width: 624px;
+  }
+}
+
+.order-success_btn {
+  margin-top: 34px;
+  margin-bottom: 76px;
+  display: flex;
+  gap: 240px;
+  justify-content: center;
+
+  a {
+    &:first-child {
+      border: 1px solid #176ab4;
+      color: #176ab4;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      background: #fff;
+      padding: 12px 14px 11px;
+      width: 192px;
+    }
+
+    &:last-child {
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      background: #176ab4;
+      padding: 12px 14px 11px;
+      border: none;
+      width: 192px;
+    }
+  }
+}

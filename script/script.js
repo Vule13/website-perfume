@@ -169,3 +169,186 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+//
+
+const quantityValue = document.querySelector("#quantity");
+const plus = document.querySelector("#plus");
+const minus = document.querySelector("#minus");
+const decrementBtns = document.querySelectorAll('[id^="minus"]');
+const incrementBtns = document.querySelectorAll('[id^="plus"]');
+
+plus?.addEventListener("click", () => {
+  quantityValue.value++;
+});
+
+minus?.addEventListener("click", () => {
+  if (quantityValue.value > 1) {
+    quantityValue.value--;
+  }
+});
+
+decrementBtns.forEach((btn) => {
+  btn.addEventListener("click", updateQuantity);
+});
+
+incrementBtns.forEach((btn) => {
+  btn.addEventListener("click", updateQuantity);
+});
+
+const paymentMethods = document.querySelectorAll(
+  ".payment-method_item > input"
+);
+const paymentInfo = document.querySelector(".payment-info");
+
+paymentMethods?.forEach((paymentMethod) => {
+  paymentMethod.addEventListener("change", () => {
+    if (paymentMethod.value == 2) {
+      paymentInfo.style.display = "block";
+    } else {
+      paymentInfo.style.display = "none";
+    }
+  });
+});
+
+// popup
+
+const deleteButtons = document.querySelectorAll("#del");
+const popup = document.querySelector("#popup");
+const cancel = document.querySelector("#cancel");
+const deleteProduct = document.querySelector("#delete");
+const addToCard = document.querySelector(".btn-addtocard");
+const productItems = document.querySelectorAll(".product-item_card");
+
+let currentRow;
+deleteProduct?.addEventListener("click", () => {
+  currentRow.remove();
+
+  popup.style.display = "none";
+});
+
+popup?.addEventListener("click", (event) => {
+  if (!event.target.closest(".popup-content")) {
+    popup.style.display = "none";
+  }
+});
+
+deleteButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    currentRow = button.closest("tr");
+    popup.style.display = "flex";
+  });
+});
+
+productItems.forEach((product) => {
+  product.addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
+});
+
+cancel?.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+addToCard?.addEventListener("click", () => {
+  popup.style.display = "flex";
+});
+
+//
+
+const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+checkBoxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", updateTotal);
+});
+
+function updateTotal() {
+  let total = 0;
+  const rows = document.querySelectorAll("table tr");
+
+  rows.forEach((row) => {
+    const checkbox = row.querySelector('input[type="checkbox"]');
+    const priceCell = row.querySelector("td:nth-child(3)");
+
+    if (checkbox && checkbox.checked && priceCell) {
+      const price = parseFloat(
+        priceCell.textContent.replace("đ", "").replace(/,/g, "")
+      );
+      total += price;
+    }
+  });
+
+  const totalElement = document.querySelector(
+    ".cart_total-number span:last-child"
+  );
+  if (totalElement) {
+    totalElement.textContent = total.toLocaleString("vi-VN") + "đ";
+  }
+}
+
+function updateQuantity(event) {
+  const btn = event.target;
+  const row = btn.closest("tr");
+  const quantityInput = row.querySelector('input[type="number"]');
+  const priceCell = row.querySelector("td:nth-child(3)");
+  const totalCell = row.querySelector("td:nth-child(5)");
+
+  if (quantityInput && priceCell && totalCell) {
+    let quantity = parseInt(quantityInput.value);
+    const price = parseFloat(
+      priceCell.textContent.replace("đ", "").replace(/,/g, "")
+    );
+
+    if (btn.id.startsWith("minus")) {
+      if (quantity > 1) {
+        quantity--;
+      }
+    } else if (btn.id.startsWith("plus")) {
+      quantity++;
+    }
+
+    quantityInput.value = quantity;
+    const total = price * quantity;
+    totalCell.textContent = total.toLocaleString("vi-VN") + "đ";
+
+    updateTotal();
+  }
+}
+updateTotal();
+
+// login
+let isLogin = getFromLocalStorage("isLogin") || false;
+const loginBtn = document.querySelector("#login-action");
+const loginAvt = document.querySelector(".header-account");
+const logoutBtn = document.querySelector("#logout");
+
+loginBtn?.addEventListener("click", () => {
+  saveToLocalStorage("isLogin", true);
+});
+
+if (isLogin) {
+  loginAvt.innerHTML =
+    "<img class='avt-login' src='./assets/avatar user.jpg' alt='avt'/>";
+} else {
+  loginAvt.innerHTML =
+    "<img id='avatar' src='./assets/user.png' alt='account' />";
+}
+
+logoutBtn?.addEventListener("click", () => {
+  localStorage.removeItem("isLogin");
+  window.location.replace("./index.html");
+});
+
+// cart_total-btn
+const cartTotal = document.querySelector(".cart_total-btn");
+const popupContent = document.querySelector(".popup-content");
+const popupContentLogin = document.querySelector(".popup-content_login");
+
+cartTotal?.addEventListener("click", () => {
+  if (isLogin) {
+    window.location.replace("./payment.html");
+  }
+
+  popup.style.display = "flex";
+  popupContent.style.display = "none";
+  popupContentLogin.style.display = "block";
+});
