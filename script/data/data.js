@@ -192,6 +192,7 @@ const productHome = [
     brand: "",
     category: "",
     day: "2023-11-01",
+    sale: 2600000,
   },
   {
     id: 7,
@@ -231,6 +232,7 @@ const productHome2 = [
     brand: "Dior",
     category: "female-perfume",
     day: "2023-03-22",
+    sale: 2900000,
   },
   {
     id: 3,
@@ -249,6 +251,7 @@ const productHome2 = [
     brand: "Roja",
     category: "unisex-perfume",
     day: "2023-07-04",
+    sale: 2900000,
   },
   {
     id: 5,
@@ -285,6 +288,7 @@ const productHome2 = [
     brand: "Yves Saint Laurent",
     category: "niche-perfume",
     day: "2023-01-01",
+    sale: 2150000,
   },
 ];
 
