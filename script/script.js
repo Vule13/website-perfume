@@ -219,6 +219,7 @@ const cancel = document.querySelector("#cancel");
 const deleteProduct = document.querySelector("#delete");
 const addToCard = document.querySelector(".btn-addtocard");
 const productItems = document.querySelectorAll(".product-item_card");
+const popupContentLogin = document.querySelector(".popup-content_login");
 
 let currentRow;
 deleteProduct?.addEventListener("click", () => {
@@ -235,6 +236,7 @@ popup?.addEventListener("click", (event) => {
 
 deleteButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    popupContentLogin.style.display = "none";
     currentRow = button.closest("tr");
     popup.style.display = "flex";
   });
@@ -341,7 +343,6 @@ logoutBtn?.addEventListener("click", () => {
 // cart_total-btn
 const cartTotal = document.querySelector(".cart_total-btn");
 const popupContent = document.querySelector(".popup-content");
-const popupContentLogin = document.querySelector(".popup-content_login");
 
 cartTotal?.addEventListener("click", () => {
   if (isLogin) {

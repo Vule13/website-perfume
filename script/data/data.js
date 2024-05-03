@@ -159,7 +159,7 @@ const productHome = [
   {
     id: 3,
     name: "Yves Saint Laurent Y EDP",
-    image: "./assets/dior sauvage edp.jpg",
+    image: "./assets/Yves Saint Laurent Y EDP.jpg",
     price: 3000000,
     brand: "",
     category: "",
