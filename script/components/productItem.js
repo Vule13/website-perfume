@@ -1,15 +1,26 @@
 import { formatNumber } from "../utils/formatNumber.js";
 
 const productItem = (data, col) => {
+  let sale = "";
+  let price = "";
+  if (data.sale) {
+    sale = `<div class="product-tag">15%</div>`;
+    price = `<span class="price">${formatNumber(data.price)}đ</span>
+    <span class="sale">${formatNumber(data.sale)}đ</span>`;
+  } else {
+    price = `<span>${formatNumber(data.price)}đ</span>`;
+  }
+
   return `
   <div class="col" style="--col-xl: ${col};">
     <div  class="product-item" >
+      ${sale}
       <a href="./product-detail.html" class="product-item_img">
         <img src="${data.image}" alt="${data.name}" />
       </a>
       <div class="product-item_content">
         <h3 class="product-item_title">${data.name}</h3>
-        <div class="product-item_price">${formatNumber(data.price)}đ</div>
+        <div class="product-item_price">${price}</div>
         <div class="product-item_info">
           <span class="product-item_rating">
             <svg xmlns="http://www.w3.org/2000/svg" width="86" height="18" viewBox="0 0 86 18" fill="none">

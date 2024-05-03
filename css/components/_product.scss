@@ -62,6 +62,7 @@
   padding: 17.2px 20px 26.2px;
   cursor: pointer;
   display: block;
+  position: relative;
 }
 
 .product-item_img {
@@ -91,6 +92,16 @@
   font-weight: 400;
   line-height: 18px;
   margin: 5px 0 10px;
+
+  .sale {
+    margin-left: 29px;
+    color: #bbb7b7;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration: line-through;
+  }
 }
 
 .product-item_info {
@@ -139,4 +150,23 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.product-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 57px;
+  height: 29px;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background-color: #ec3237;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
