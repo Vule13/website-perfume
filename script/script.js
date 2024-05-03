@@ -322,6 +322,7 @@ let isLogin = getFromLocalStorage("isLogin") || false;
 const loginBtn = document.querySelector("#login-action");
 const loginAvt = document.querySelector(".header-account");
 const logoutBtn = document.querySelector("#logout");
+const logout = document.querySelector("#logout-btn");
 
 loginBtn?.addEventListener("click", () => {
   saveToLocalStorage("isLogin", true);
@@ -336,9 +337,14 @@ if (isLogin) {
 }
 
 logoutBtn?.addEventListener("click", () => {
-  localStorage.removeItem("isLogin");
-  window.location.replace("./index.html");
+  popup.style.display = "flex";
 });
+
+logout?.addEventListener("click", ()=>{
+  localStorage.removeItem("isLogin");
+  popup.style.display = "none";
+  window.location.replace("./index.html");
+})
 
 // cart_total-btn
 const cartTotal = document.querySelector(".cart_total-btn");

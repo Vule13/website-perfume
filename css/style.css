@@ -58,6 +58,13 @@
   height: 100px;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background-color: #fff;
+}
+
 .header-search {
   display: flex;
 }
