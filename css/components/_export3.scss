@@ -78,7 +78,7 @@
 }
 .v226_16811 {
   width: 265px;
-  height: 57px;
+  height: 80px;
   background: url("../images/v226_16811.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -735,7 +735,7 @@
 }
 .v226_16865 {
   width: 113px;
-  height: 16px;
+  height: 26px;
   background: url("../images/v226_16865.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -960,13 +960,12 @@
   top: 2px;
   left: 2px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .v226_16884 {
-  width: 119px;
   color: rgba(255,255,255,1);
-  position: absolute;
-  top: 0px;
-  left: 0px;
   font-family: Roboto;
   font-weight: Medium;
   font-size: 18px;
