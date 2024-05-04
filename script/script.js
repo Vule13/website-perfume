@@ -273,7 +273,7 @@ function updateTotal() {
 
     if (checkbox && checkbox.checked && priceCell) {
       const price = parseFloat(
-        priceCell.textContent.replace("đ", "").replace(/,/g, "")
+        priceCell.textContent.replace("đ", "").replace(/\./g, "").replace(/,/g, "")
       );
       total += price;
     }
@@ -283,7 +283,7 @@ function updateTotal() {
     ".cart_total-number span:last-child"
   );
   if (totalElement) {
-    totalElement.textContent = total.toLocaleString("vi-VN") + "đ";
+    totalElement.textContent = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total);
   }
 }
 
@@ -297,7 +297,7 @@ function updateQuantity(event) {
   if (quantityInput && priceCell && totalCell) {
     let quantity = parseInt(quantityInput.value);
     const price = parseFloat(
-      priceCell.textContent.replace("đ", "").replace(/,/g, "")
+      priceCell.textContent.replace("đ", "").replace(/\./g, "").replace(/,/g, "")
     );
 
     if (btn.id.startsWith("minus")) {
@@ -310,7 +310,7 @@ function updateQuantity(event) {
 
     quantityInput.value = quantity;
     const total = price * quantity;
-    totalCell.textContent = total.toLocaleString("vi-VN") + "đ";
+    totalCell.textContent = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total);
 
     updateTotal();
   }

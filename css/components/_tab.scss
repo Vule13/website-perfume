@@ -169,3 +169,34 @@
     }
   }
 }
+
+
+.dot-color1 {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: var(--color-red);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 10px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.dot-color2 {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: #ED9536;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 10px;
+    transform: translate(-50%, -50%);
+  }
+}
