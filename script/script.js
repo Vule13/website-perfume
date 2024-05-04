@@ -359,3 +359,12 @@ cartTotal?.addEventListener("click", () => {
   popupContent.style.display = "none";
   popupContentLogin.style.display = "block";
 });
+
+const discountValue = document.querySelector("#order-input");
+const discountBtn = document.querySelector(".order-discount_btn > button");
+
+discountValue.addEventListener("change", () => {
+  if (discountValue.value) {
+    discountBtn.style.background = "#176ab4";
+  }
+});
