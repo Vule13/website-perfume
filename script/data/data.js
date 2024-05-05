@@ -43,6 +43,7 @@ const productData = [
     brand: "",
     category: "female-perfume",
     day: "2023-03-22",
+    sale: 2900000,
   },
   {
     id: 6,
@@ -80,6 +81,7 @@ const productData = [
     brand: "Dior",
     category: "unisex-perfume",
     day: "2023-11-01",
+    sale: 2600000,
   },
   {
     id: 10,
@@ -125,6 +127,7 @@ const productData = [
     brand: "Roja",
     category: "niche-perfume",
     day: "2023-01-01",
+    sale: 2150000,
   },
   {
     id: 15,
