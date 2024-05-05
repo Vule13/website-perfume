@@ -14,116 +14,128 @@
   </head>
 
   <body>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3 class="popup-title">Bạn có chắc chắn muốn đăng xuất ?</h3>
+        <div class="popup-btn">
+          <button id="cancel">Huỷ bỏ</button>
+          <button id="logout-btn" style="padding: 8px 16px;">Đăng xuất</button>
+        </div>
+      </div>
+    </div>
     <div id="app">
       <main>
-        <div class="container">
-          <h2 class="page-title">
-            Trang chủ > Tài khoản > <span>Thông tin cá nhân</span>
-          </h2>
-          <div class="row account">
-            <div class="col" style="--col-xl: 3">
-              <div class="account-left">
-                <div class="account-left_avata">
-                  <img src="./images/avata.png" alt="avata" />
-                  <h3>Lan Anh</h3>
-                </div>
-                <div class="account-left_menu">
-                  <a
-                    href="account.html"
-                    class="account-left__item account-left__item-ac"
-                  >
-                    <img src="./images/user.png" alt="user" />
-                    <span>Thông tin cá nhân</span>
-                  </a>
-                  <a href="account-password.html" class="account-left__item">
-                    <img src="./images/lock.png" alt="user" />
-                    <span>Đổi mật khẩu</span>
-                  </a>
-                  <a href="account-order.html" class="account-left__item">
-                    <img src="./images/cart.png" alt="user" />
-                    <span>Đơn hàng</span>
-                  </a>
-                  <a href="#" id="logout" class="account-left__item">
-                    <img src="./images/log-out.png" alt="user" />
-                    <span>Đăng xuất</span>
-                  </a>
+        <div>
+          <div class="container">
+            <h2 class="page-title">
+              Trang chủ > Tài khoản > <span>Thông tin cá nhân</span>
+            </h2>
+            <div class="row account">
+              <div class="col" style="--col-xl: 3">
+                <div class="account-left">
+                  <div class="account-left_avata">
+                    <img src="./images/avata.png" alt="avata" />
+                    <h3>Lan Anh</h3>
+                  </div>
+                  <div class="account-left_menu">
+                    <a
+                      href="account.html"
+                      class="account-left__item account-left__item-ac"
+                    >
+                      <img src="./images/user.png" alt="user" />
+                      <span>Thông tin cá nhân</span>
+                    </a>
+                    <a href="account-password.html" class="account-left__item">
+                      <img src="./images/lock.png" alt="user" />
+                      <span>Đổi mật khẩu</span>
+                    </a>
+                    <a href="account-order.html" class="account-left__item">
+                      <img src="./images/cart.png" alt="user" />
+                      <span>Đơn hàng</span>
+                    </a>
+                    <a href="#" id="logout" class="account-left__item">
+                      <img src="./images/log-out.png" alt="user" />
+                      <span>Đăng xuất</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col" style="--col-xl: 9">
-              <h1 class="heading-page">Thông tin cá nhân</h1>
-              <div class="account-right">
-                <div class="account-right_table">
-                  <table class="account-right_name">
-                    <tr>
-                      <td>Tên đăng nhập</td>
-                      <td>
-                        <input type="text" value="anh123@gmail.com" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Họ tên</td>
-                      <td>
-                        <input type="text" value="Lan Anh" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Số điện thoại</td>
-                      <td>
-                        <input type="text" value="0965998668" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Địa chỉ</td>
-                      <td>
-                        <input
-                          type="text"
-                          value="168 Định Công, Hoàng Mai, Hà Nội"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Giới tính</td>
-                      <td class="account-right_input-radio">
-                        <span class="account-right_radio">
-                          <label for="male">Nam</label>
+              <div class="col" style="--col-xl: 9">
+                <h1 class="heading-page">Thông tin cá nhân</h1>
+                <div class="account-right">
+                  <div class="account-right_table">
+                    <table class="account-right_name">
+                      <tr>
+                        <td>Tên đăng nhập</td>
+                        <td>
+                          <input type="text" value="anh123@gmail.com" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Họ tên</td>
+                        <td>
+                          <input type="text" value="Lan Anh" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Số điện thoại</td>
+                        <td>
+                          <input type="text" value="0965998668" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Địa chỉ</td>
+                        <td>
                           <input
-                            type="radio"
-                            id="male"
-                            name="gender"
-                            value="male"
+                            type="text"
+                            value="168 Định Công, Hoàng Mai, Hà Nội"
                           />
-                        </span>
-                        <span class="account-right_radio">
-                          <label for="female">Nữ</label>
-                          <input
-                            type="radio"
-                            id="female"
-                            name="gender"
-                            value="female"
-                            checked
-                          />
-                        </span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Ngày sinh</td>
-                      <td>
-                        <input type="datetime" value="26/2/1999" />
-                      </td>
-                    </tr>
-                  </table>
-                  <a href="" class="button-submit">Lưu lại</a>
-                </div>
-
-                <div class="account-right_img-avata">
-                  <img src="./images/avata2.png" alt="avata" />
-                  <button class="account-right_img-button">Chọn ảnh</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Giới tính</td>
+                        <td class="account-right_input-radio">
+                          <span class="account-right_radio">
+                            <label for="male">Nam</label>
+                            <input
+                              type="radio"
+                              id="male"
+                              name="gender"
+                              value="male"
+                            />
+                          </span>
+                          <span class="account-right_radio">
+                            <label for="female">Nữ</label>
+                            <input
+                              type="radio"
+                              id="female"
+                              name="gender"
+                              value="female"
+                              checked
+                            />
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ngày sinh</td>
+                        <td>
+                          <input type="datetime" value="26/2/1999" />
+                        </td>
+                      </tr>
+                    </table>
+                    <a href="" class="button-submit">Lưu lại</a>
+                  </div>
+  
+                  <div class="account-right_img-avata">
+                    <img src="./images/avata2.png" alt="avata" />
+                    <button class="account-right_img-button">Chọn ảnh</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
       </main>
     </div>
     <script src="./script/script.js" type="module"></script>

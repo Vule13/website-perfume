@@ -40,7 +40,7 @@ const productData = [
     name: "Dior J'Adore",
     image: "./assets/Dior J’Adore.jpg",
     price: 2600000,
-    brand: "Dior",
+    brand: "",
     category: "female-perfume",
     day: "2023-03-22",
   },
@@ -300,7 +300,7 @@ const productHome = [
   {
     id: 3,
     name: "Yves Saint Laurent Y EDP",
-    image: "./assets/dior sauvage edp.jpg",
+    image: "./assets/Yves Saint Laurent Y EDP.jpg",
     price: 3000000,
     brand: "",
     category: "",

@@ -241,6 +241,7 @@ popup?.addEventListener("click", (event) => {
 
 deleteButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    popupContentLogin.style.display = "none";
     currentRow = button.closest("tr");
     popup.style.display = "flex";
   });
@@ -277,7 +278,7 @@ function updateTotal() {
 
     if (checkbox && checkbox.checked && priceCell) {
       const price = parseFloat(
-        priceCell.textContent.replace("đ", "").replace(/,/g, "")
+        priceCell.textContent.replace("đ", "").replace(/\./g, "").replace(/,/g, "")
       );
       total += price;
     }
@@ -287,7 +288,7 @@ function updateTotal() {
     ".cart_total-number span:last-child"
   );
   if (totalElement) {
-    totalElement.textContent = total.toLocaleString("vi-VN") + "đ";
+    totalElement.textContent = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total);
   }
 }
 
@@ -301,7 +302,7 @@ function updateQuantity(event) {
   if (quantityInput && priceCell && totalCell) {
     let quantity = parseInt(quantityInput.value);
     const price = parseFloat(
-      priceCell.textContent.replace("đ", "").replace(/,/g, "")
+      priceCell.textContent.replace("đ", "").replace(/\./g, "").replace(/,/g, "")
     );
 
     if (btn.id.startsWith("minus")) {
@@ -314,7 +315,7 @@ function updateQuantity(event) {
 
     quantityInput.value = quantity;
     const total = price * quantity;
-    totalCell.textContent = total.toLocaleString("vi-VN") + "đ";
+    totalCell.textContent = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total);
 
     updateTotal();
   }
@@ -326,6 +327,7 @@ let isLogin = getFromLocalStorage("isLogin") || false;
 const loginBtn = document.querySelector("#login-action");
 const loginAvt = document.querySelector(".header-account");
 const logoutBtn = document.querySelector("#logout");
+const logout = document.querySelector("#logout-btn");
 
 loginBtn?.addEventListener("click", () => {
   saveToLocalStorage("isLogin", true);
@@ -340,9 +342,14 @@ if (isLogin) {
 }
 
 logoutBtn?.addEventListener("click", () => {
-  localStorage.removeItem("isLogin");
-  window.location.replace("./index.html");
+  popup.style.display = "flex";
 });
+
+logout?.addEventListener("click", ()=>{
+  localStorage.removeItem("isLogin");
+  popup.style.display = "none";
+  window.location.replace("./index.html");
+})
 
 // cart_total-btn
 const cartTotal = document.querySelector(".cart_total-btn");
@@ -356,4 +363,13 @@ cartTotal?.addEventListener("click", () => {
   popup.style.display = "flex";
   popupContent.style.display = "none";
   popupContentLogin.style.display = "block";
+});
+
+const discountValue = document.querySelector("#order-input");
+const discountBtn = document.querySelector(".order-discount_btn > button");
+
+discountValue.addEventListener("change", () => {
+  if (discountValue.value) {
+    discountBtn.style.background = "#176ab4";
+  }
 });
