@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div>
+  <div style="overflow: hidden;">
     <div class="row">
       <div class="col" style="--col-xl: 6; padding-top: 0; padding-bottom: 0;">
         <img style="height: 100%;" src="./images/dn.jpg" alt=""></div>
@@ -22,13 +22,14 @@
         <div class="login" style="padding-bottom: 0; padding-top: 0;">
           <img src="./images/logo.jpg" alt="">
           <form class="login_form" action="">
-            <div class="login_form-box">
+            <div style="text-align: left; font-size: 14px;">Tên đăng nhập <span style="color: var(--color-red);">*</span></div>
+            <div class="login_form-box" >
               <input type="text" placeholder="" />
-              <label for="">Email hoặc số điện thoại </label>
+              <label for="" style="font-size: 14px;">Email hoặc số điện thoại </label>
             </div>
-            <div class="login_form-box">
+            <div class="login_form-box" >
               <input type="password" id="password" placeholder="" />
-              <label for="">Mật khẩu <span>*</span></label>
+              <label for="" style="font-size: 14px;">Mật khẩu <span>*</span></label>
               <span class="show-password">
                 <svg class="icon-hiden-password" xmlns="http://www.w3.org/2000/svg" width="22" height="20"
                   viewBox="0 0 22 20" fill="none">
