@@ -2358,6 +2358,8 @@ header {
   height: 1305px;
   z-index: 10;
   background-color: #fff;
+  z-index: 100;
+  position: fixed;
 }
 .admin-left .admin-left__logo {
   padding-bottom: 23px;
@@ -2400,6 +2402,9 @@ header {
   justify-content: space-between;
   background-color: #fff;
   align-items: center;
+  position: fixed;
+  left: 342px;
+  width: 1185px;
 }
 .admin-right .admin-right__header .admin-right__title {
   font-size: 26px;
@@ -8311,7 +8316,7 @@ header {
   color: rgb(0, 0, 0);
   position: absolute;
   top: 17px;
-  left: 915px;
+  left: 940px;
   font-family: Roboto;
   font-weight: Medium;
   font-size: 20px;
@@ -9994,7 +9999,7 @@ header {
   color: rgb(0, 0, 0);
   position: absolute;
   top: 17px;
-  left: 915px;
+  left: 940px;
   font-family: Roboto;
   font-weight: Medium;
   font-size: 20px;
@@ -11752,7 +11757,7 @@ header {
   opacity: 1;
   position: absolute;
   top: 280px;
-  left: 1321px;
+  left: 1350px;
   overflow: hidden;
 }
 
@@ -11826,7 +11831,7 @@ header {
   display: flex;
   justify-content: space-between;
   top: 136px;
-  z-index: 100000;
+  z-index: 1;
 }
 
 .v226_17907 {
@@ -12658,7 +12663,7 @@ header {
   color: rgb(0, 0, 0);
   position: absolute;
   top: 19px;
-  left: 922px;
+  left: 955px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 16px;
@@ -16839,8 +16844,9 @@ header {
   padding: 26px 20px 70px 50px;
   background-color: #fff;
   width: 1100px;
-  margin-left: 43px;
-  margin-top: 30px;
+  position: absolute;
+  left: 385px;
+  top: 160px;
 }
 
 .analystic_title {

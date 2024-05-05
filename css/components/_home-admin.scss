@@ -8,6 +8,8 @@
   height: 1305px;
   z-index: 10;
   background-color: #fff;
+  z-index: 100;
+  position: fixed;
   .admin-left__logo {
     padding-bottom: 23px;
     max-width: 100px;
@@ -53,6 +55,9 @@
     justify-content: space-between;
     background-color: #fff;
     align-items: center;    
+    position: fixed;
+    left: 342px;
+    width: 1185px;
     .admin-right__title {
       font-size: 26px;
     }
