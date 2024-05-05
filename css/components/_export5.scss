@@ -33,7 +33,7 @@
   overflow: hidden;
 }
 .v240_17686 {
-  width: 974px;
+  width: 1080px;
   height: 24px;
   background: url("../images/v240_17686.png");
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
   overflow: hidden;
 }
 .v240_17679 {
-  width: 974px;
+  width: 1080px;
   height: 24px;
   background: url("../images/v240_17679.png");
   background-repeat: no-repeat;
@@ -57,81 +57,52 @@
   top: 0px;
   left: 0px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 .v240_17680 {
   width: 107px;
   color: rgba(187,183,183,1);
-  position: absolute;
-  top: 1px;
-  left: 0px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 20px;
   opacity: 1;
-  text-align: left;
 }
 .v240_17681 {
-  width: 158px;
-  color: rgba(187,183,183,1);
-  position: absolute;
-  top: 1px;
-  left: 132px;
+  color: rgba(187,183,183,1);;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 20px;
   opacity: 1;
-  text-align: center;
 }
 .v240_17682 {
-  width: 146px;
   color: rgba(23,106,180,1);
-  position: absolute;
-  top: 1px;
-  left: 314px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 20px;
   opacity: 1;
-  text-align: center;
 }
 .v240_17683 {
-  width: 176px;
   color: rgba(187,183,183,1);
-  position: absolute;
-  top: 0px;
-  left: 490px;
   font-family: Roboto;
   font-weight: Regular;
   font-size: 20px;
   opacity: 1;
-  text-align: center;
 }
 .v240_17684 {
-  width: 165px;
   color: rgba(187,183,183,1);
-  position: absolute;
-  top: 0px;
-  left: 687px;
-  font-family: Roboto;
-  font-weight: Regular;
   font-size: 20px;
   opacity: 1;
   text-align: center;
 }
 .v240_17685 {
-  width: 98px;
   color: rgba(187,183,183,1);
-  position: absolute;
-  top: 1px;
-  left: 876px;
-  font-family: Roboto;
-  font-weight: Regular;
   font-size: 20px;
   opacity: 1;
   text-align: center;
 }
 .v226_17232 {
-  width: 1012px;
+  width: 1100px;
   height: 758px;
   background: url("../images/v226_17232.png");
   background-repeat: no-repeat;
@@ -1877,7 +1848,7 @@
 }
 
 .v240_17679554 {
-  width: 974px;
+  width: 1100px;
   height: 24px;
   background: url(../images/v240_17679.png);
   background-repeat: no-repeat;
@@ -1887,6 +1858,8 @@
   position: absolute;
   left: 385px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   top: 136px;
   z-index: 100000;
 }
