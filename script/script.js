@@ -6,7 +6,7 @@ import {
   quickSort,
   searchFilter,
 } from "./utils/filterProduct.js";
-import { productData, productMale } from "./data/data.js";
+import { productChanel, productData, productMale } from "./data/data.js";
 import { translatedValues } from "./utils/translateTitle.js";
 import {
   getFromLocalStorage,
@@ -26,6 +26,7 @@ if (sidebarContent) sidebarContent.innerHTML = sidebar();
 // get element product
 const productContent = document.querySelector("#product");
 const productContent2 = document.querySelector("#product2");
+const pagination = document.querySelector(".pagination");
 
 // check page
 const isPage = document.querySelector("#product")?.getAttribute("data");
@@ -87,6 +88,8 @@ checkboxes.forEach((checkbox) =>
 
     if (selectedValues.length === 0) {
       softTitle.innerHTML = `Tất cả sản phẩm`;
+      pagination.style.display = "flex";
+
       renderProduct(products(isPage), productContent);
       return;
     }
@@ -100,7 +103,18 @@ checkboxes.forEach((checkbox) =>
       return;
     }
 
+    if (selectedValues.length === 1 && checkbox.value === "chanel") {
+      renderProduct(products(isPage, productChanel), productContent);
+      return;
+    }
+
     const softProduct = filterProducts(productData, selectedValues);
+
+    if (softProduct.length < 12) {
+      pagination.style.display = "none";
+    } else {
+      pagination.style.display = "flex";
+    }
 
     renderProduct(products(isPage, softProduct), productContent);
   })
@@ -278,7 +292,10 @@ function updateTotal() {
 
     if (checkbox && checkbox.checked && priceCell) {
       const price = parseFloat(
-        priceCell.textContent.replace("đ", "").replace(/\./g, "").replace(/,/g, "")
+        priceCell.textContent
+          .replace("đ", "")
+          .replace(/\./g, "")
+          .replace(/,/g, "")
       );
       total += price;
     }
@@ -288,7 +305,10 @@ function updateTotal() {
     ".cart_total-number span:last-child"
   );
   if (totalElement) {
-    totalElement.textContent = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total);
+    totalElement.textContent = new Intl.NumberFormat("vi-VN", {
+      style: "currency",
+      currency: "VND",
+    }).format(total);
   }
 }
 
@@ -302,7 +322,10 @@ function updateQuantity(event) {
   if (quantityInput && priceCell && totalCell) {
     let quantity = parseInt(quantityInput.value);
     const price = parseFloat(
-      priceCell.textContent.replace("đ", "").replace(/\./g, "").replace(/,/g, "")
+      priceCell.textContent
+        .replace("đ", "")
+        .replace(/\./g, "")
+        .replace(/,/g, "")
     );
 
     if (btn.id.startsWith("minus")) {
@@ -315,7 +338,10 @@ function updateQuantity(event) {
 
     quantityInput.value = quantity;
     const total = price * quantity;
-    totalCell.textContent = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total);
+    totalCell.textContent = new Intl.NumberFormat("vi-VN", {
+      style: "currency",
+      currency: "VND",
+    }).format(total);
 
     updateTotal();
   }
@@ -345,11 +371,11 @@ logoutBtn?.addEventListener("click", () => {
   popup.style.display = "flex";
 });
 
-logout?.addEventListener("click", ()=>{
+logout?.addEventListener("click", () => {
   localStorage.removeItem("isLogin");
   popup.style.display = "none";
   window.location.replace("./index.html");
-})
+});
 
 // cart_total-btn
 const cartTotal = document.querySelector(".cart_total-btn");
