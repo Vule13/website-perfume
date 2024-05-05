@@ -88,7 +88,7 @@ const productData = [
     name: "Yves Saint Laurent Black",
     image: "./assets/Yves Saint Laurent Black.jpg",
     price: 2250000,
-    brand: "Roja",
+    brand: "Yves Saint Laurent",
     category: "unisex-perfume",
     day: "2023-07-04",
   },
