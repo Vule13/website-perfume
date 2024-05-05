@@ -4,7 +4,7 @@ const productItem = (data, col) => {
   let sale = "";
   let price = "";
   if (data.sale) {
-    sale = `<div class="product-tag">15%</div>`;
+    sale = `<div class="product-tag">-15%</div>`;
     price = `<span class="price">${formatNumber(data.price)}đ</span>
     <span class="sale">${formatNumber(data.sale)}đ</span>`;
   } else {

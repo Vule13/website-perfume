@@ -6,7 +6,7 @@ import {
   quickSort,
   searchFilter,
 } from "./utils/filterProduct.js";
-import { productData } from "./data/data.js";
+import { productData, productMale } from "./data/data.js";
 import { translatedValues } from "./utils/translateTitle.js";
 import {
   getFromLocalStorage,
@@ -94,6 +94,11 @@ checkboxes.forEach((checkbox) =>
     let translatedTitle = translatedValues(selectedValues);
 
     softTitle.innerHTML = `${translatedTitle.join(", ")}`;
+
+    if (selectedValues.length === 1 && checkbox.value === "male-perfume") {
+      renderProduct(products(isPage, productMale), productContent);
+      return;
+    }
 
     const softProduct = filterProducts(productData, selectedValues);
 
